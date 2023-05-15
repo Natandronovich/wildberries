@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "less": "^4.1.3",
+    "parcel": "^2.8.3"
+  },
+  "name": "wildberries",
+  "description": "Курсовая работа",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel src/index.html --no-source-maps --no-cache --public-url ./"
+  },
+  "author": "",
+  "license": "ISC"
+}
