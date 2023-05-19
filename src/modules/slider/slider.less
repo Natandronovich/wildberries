@@ -1,12 +1,17 @@
 .slider-body{
     &__wrapper{
         height: 100%;
-        padding: 50px;
+        padding: 30px;
+        background: #ffffff;
+
+            @media screen and (max-width: 685px) {
+                padding: 30px 10px 30px 10px;
+            }
+
     }
 
     .slider{
         position: relative;
-        padding: 0 100px;
 
         &__item {
             text-align: center;
@@ -19,8 +24,8 @@
     /* ограничевающая оболочка */
     .slick-list{
         overflow: hidden;
-        // border-radius: 16px;
-        // box-shadow: 1px 3px 30px #666666ad;
+        border-radius: 16px;
+        box-shadow: 1px 3px 30px #6666667c;
     }
 
     /* лента слайдов */
@@ -31,18 +36,22 @@
     .slick-arrow{
     position: absolute;
     top: 40%;
-    z-index: 10;
+    z-index: 100;
     font-size: 0;  /*чтобы пропали надписи на стрелках*/
     width: 50px;
     height: 55px;
     border: none;
     cursor: pointer;
         &.slick-prev{
-            left: 0;
+            // left: 0;
+            left: 2%;
+            z-index: 1000;
             background: url('/src/core/assets/icons/arrow-arrow-left.svg') 0 0 / 100% no-repeat;
         }
         &.slick-next{
-            right: 0;
+            // right: 0;
+            right: 2%;
+            z-index: 1000;
             background: url('/src/core/assets/icons/arrow-arrow-right.svg') 0 0 / 100% no-repeat;
         }
     }
@@ -52,14 +61,27 @@
         align-items: center;
         justify-content: center;
 
+            @media screen and (max-width: 530px) {
+                margin-top: -10px;
+            }
+
         li{
             margin: 0 10px;
+
+                @media screen and (max-width: 530px) {
+                    margin: 0 5px;
+                }
         
             &.slick-active button{
-                background-color: #212121db;
-                /* background-color: #b5aff8; */
+                background-color: #212121c2;
+                // background-color: #8570BD;
                 width: 15px;
                 height: 15px;
+
+                @media screen and (max-width: 530px) {
+                    width: 11px;
+                    height: 11px;
+                }
             }
         }
 
@@ -68,9 +90,14 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            /* background-color: #C5C1F5; */
-            background-color: #212121ca;
+            // background-color: #C5C1F5;
+            background-color: #21212180;
             border: none;
+
+                @media screen and (max-width: 530px) {
+                    width: 9px;
+                    height: 9px;
+                }
         }
     }
 }

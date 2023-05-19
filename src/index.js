@@ -13,8 +13,10 @@ $('.slider').slick({
     fade:true,
     responsive: [
         {
-            breakpoint: 678,
-            settings: {}
+            breakpoint: 1024,
+            settings: {
+                arrows:false,
+            }
         }
     ]
 });
