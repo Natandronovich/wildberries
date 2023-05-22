@@ -7,6 +7,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="./core/styles/style.less"> -->
     <link rel="stylesheet" type="text/css" href="./cart.css">
     <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="./card.css">
     <link rel="icon" href="./core/assets/icons/favicon.png" type="image/x-icon">
     <title>Wildberries</title>
 </head>
@@ -14,7 +15,7 @@
     <header>
         <!-- <a href="#popup" class="header__cart">попап 1</a> -->
         <button class="open-modal-btn" id="open-modal-btn">Корзина</button>
-        <!-- <span class="cart__quantity">0</span> -->
+        <span class="cart__counter">0</span>
         <div class="cart-modal" id="cart-modal">
             <div class="cart-modal__box">
                 <div class="cart-modal__top">
@@ -32,7 +33,7 @@
                 </div>
                 <div class="cart-modal__content">
                     <ul class="cart-modal__list">
-                        <li class="cart-modal__item">
+                        <!-- <li class="cart-modal__item">
                             <div class="cart-modal__item-img"><img src="/src/core/assets/icons/watch1.png" alt=""></div>
                             <div class="cart-modal__item-descr">
                                 <h3>Watch</h3>
@@ -82,17 +83,47 @@
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M15.4624 7.625H18.5249V9.375H17.1365L16.37 17.8063C16.3085 18.4824 15.7417 19 15.0629 19H8.86193C8.1831 19 7.61628 18.4824 7.55482 17.8063L6.78834 9.375H5.3999V7.625H8.4624V6.3125C8.4624 5.58763 9.05003 5 9.7749 5H14.1499C14.8748 5 15.4624 5.58763 15.4624 6.3125V7.625ZM10.2124 6.75V7.625H13.7124V6.75H10.2124ZM8.54556 9.375L9.26147 17.25H14.6633L15.3792 9.375H8.54556Z" fill="currentColor"></path></svg>
                                 </button>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="cart-modal__full-price">
                         <h2>Итого:</h2>
-                        <p class="full-price">500 $</p>
+                        <p class="full-price"></p>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <main>
+        <div class="product">
+            <div key="iphone-12">
+                <p class="card-name">Iphone 12</p>
+                <img src="/src/core/assets/icons/watch1.png" alt="Iphone" 12="">
+                <div class="card-info">            
+                    <p class="product-price">$500</p>
+                    <button class="product-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div key="iphone-12">
+                <p class="card-name">Iphone 12</p>
+                <img src="/src/core/assets/icons/watch1.png" alt="Iphone" 12="">
+                <div class="card-info">            
+                    <p class="product-price">$500</p>
+                    <button class="product-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div key="iphone-12">
+                <p class="card-name">Iphone 12</p>
+                <img src="/src/core/assets/icons/watch1.png" alt="Iphone" 12="">
+                <div class="card-info">            
+                    <p class="product-price">$500</p>
+                    <button class="product-btn">Buy</button>
+                </div>
+            </div>
+        </div>
     </main>
     <footer></footer>
     <!-- <script type="module" src="./index.js"></script> -->

@@ -10,7 +10,7 @@
     margin: 20px;
     position: relative;
 }
-.cart__quantity {
+.cart__counter {
 	position: absolute;
     left: 113px;
     top: 10px;
@@ -25,6 +25,7 @@
 	align-items: center;
 	justify-content: center;
 }
+
 
 .cart-modal{
     position: fixed;
@@ -166,7 +167,8 @@
 .cart-modal__full-price{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding-right: 50px;
     font-size: 23px;
     line-height: 24px;
 }
