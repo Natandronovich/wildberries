@@ -37,7 +37,7 @@ const productsBtn = document.querySelectorAll('.product-btn');
 const cartList = document.querySelector('.cart-modal__list');
 const cart = document.querySelector('.cart-modal');
 const cartCounter = document.querySelector('.cart__counter');
-// const deleteAllBtn = document.querySelector('.cart-modal__top-button');
+const deleteAllBtn = document.querySelector('.cart-modal__top-button');
 const fullPrice = document.querySelector('.cart-modal__full-price');
 let price = 0;
 
@@ -140,17 +140,21 @@ function deleteProduct(productParent) {
 }
 
 
-cart.addEventListener('click', (e) => {
-    let deleteBtn = e.target;
-    if(deleteBtn.classList.contains('cart-clear-all')){
-        deleteAll();
-    }
-});
+// cart.addEventListener('click', (e) => {
+//     let deleteBtn = e.target;
+//     if(deleteBtn.classList.contains('cart-clear-all')){
+//         deleteAll();
+//     }
+// });
 
-//удаляем весь список
-function deleteAll(){
-    cart.querySelectorAll('.cart-modal__item').forEach(elem => elem.remove());
-}
+// //удаляем весь список
+// function deleteAll(){
+//     cart.querySelectorAll('.cart-modal__item').forEach(elem => elem.remove());
+// }
+
+deleteAllBtn.addEventListener('click', ()=> {
+    cartList.remove();
+});
 
 // document.addEventListener('click', (event) => {
 //     console.log(event.target);
