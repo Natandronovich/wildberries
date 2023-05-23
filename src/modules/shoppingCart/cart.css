@@ -124,14 +124,14 @@
     padding: 0 30px;
 }
 
-.cart-modal__item-control{
+.cart-modal__item-counters{
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
 }
 
-.cart-modal__item-control button{
+.cart-modal__item-counters button{
     border: 1px solid #808080;
     background-color: #ffffff;
     border-radius: 50%;
@@ -140,12 +140,13 @@
     cursor: pointer;
 }
 
-.cart-couter-input{
+.cart-counter-input{
     width: 32px;
     height: 32px;
     text-align: center;
     border: none;
     color: #1a1a1a;
+    background: transparent;
 }
 
 .cart-btn-delete{

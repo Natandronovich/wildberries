@@ -2,7 +2,6 @@ const openPopUpBtn = document.getElementById('open-modal-btn');
 const popUp = document.getElementById('cart-modal');
 const closePopUpBtn = document.getElementById('close-modal-btn');
 
-
 // открыть модальное окно
 openPopUpBtn.addEventListener('click', openPopUp)
 function openPopUp(e){
@@ -33,66 +32,16 @@ popUp.addEventListener('click', event => {
 })
 
 
-// //корзина
-// let cart = {
-//     's1': {
-//         'name' : 'watch',
-//         'count' : 3,
-//     }, // уникальный номер товара id ? артикул??
-//     'a2': {
-//         'name' : 'airpods',
-//         'count' : 1,
-//     }, // уникальный номер товара id ? артикул??
-//     'b3': {
-//         'name' : 'watch',
-//         'count' : 2,
-//     },
-// }
-
-
-
-// document.onclick = (event) => {
-//     // console.log(event.target);
-//     if(event.target.classList.contains('cart-btn-plus')){
-//         // console.log(event.target.dataset.id);
-//         plusFunction(event.target.dataset.id);
-//     }else if(event.target.classList.contains('cart-btn-minus')){
-//         minusFunction(event.target.dataset.id);
-//     }
-// }
-
-// //увеличение количества товара
-// const plusFunction = (id) =>{
-//     cart[id]['count']++;
-//     renderCart();
-// }
-
-// //уменьшение количества товара
-// const minusFunction = (id) =>{
-//     if(cart[id]['count'] - 1 === 0){
-//         deleteFunction(id);
-//         return true;
-//     }
-//     cart[id]['count']--;
-//     renderCart();
-// }
-
-// // удаление товара (todo сдедать отдельно еще для кнопки delete)
-// const deleteFunction = (id) =>{
-//     delete cart[id]['count'];
-//     renderCart();
-// }
-
-
+//функции корзины
 const productsBtn = document.querySelectorAll('.product-btn');
 const cartList = document.querySelector('.cart-modal__list');
 const cart = document.querySelector('.cart-modal');
 const cartCounter = document.querySelector('.cart__counter');
-console.log(cartCounter)
+// const deleteAllBtn = document.querySelector('.cart-modal__top-button');
 const fullPrice = document.querySelector('.cart-modal__full-price');
 let price = 0;
 
-//для связи кнопки удалить и карточки может через data-id?
+//для связи кнопки удалить и карточки
 const randomId = () => {
 	return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 };
@@ -111,9 +60,9 @@ const renderCart = (img, title, price, id) =>{
         <div class="cart-modal__item-descr">
             <h3>${title}</h3>
         </div>
-        <div class="cart-modal__item-control">
+        <div class="cart-modal__item-counters">
         <button class="cart-btn-plus" data-id="${id}">+</button>
-        <input class="cart-couter-input" value="1">
+        <input class="cart-counter-input" type=""text" value="1" disabled>
         <button class="cart-btn-minus" data-id="${id}">-</button>
     </div>
     <div class="cart-modal__item-price">
@@ -125,26 +74,27 @@ const renderCart = (img, title, price, id) =>{
 </li>`;
 }
 
+
+//нажимая на card кнопку передаем нужные данные с карточки в корзину для отрисовки
 productsBtn.forEach(el => {
 	el.closest('.product').setAttribute('data-id', randomId());
 
 	el.addEventListener('click', (e) => {
 		let self = e.currentTarget;
-        console.log(self)
 		let parent = self.closest('.product');
 		let id = parent.dataset.id;
 		let img = parent.querySelector('img').getAttribute('src');
 		let title = parent.querySelector('.card-name').textContent;
 		let priceString = parent.querySelector('.product-price').textContent;
 		let priceNumber = +priceWithoutSpaces(parent.querySelector('.product-price').textContent);
-        // console.log(priceNumber)
 
 		plusFullPrice(priceNumber);
 		printFullPrice();
-
+        //копипуем данные с card в cart
         cartList.insertAdjacentHTML('afterbegin', renderCart(img, title, priceNumber, id));
 		printCounter();
-        console.log(price)
+
+        self.disabled = true;
 	});
 });
 
@@ -163,7 +113,7 @@ function printFullPrice(){
     fullPrice.textContent = `Итого: ${price} $`
 }
 
-// счетчик у кнопки корзины
+// счетчик сверху у кнопки корзины
 function printCounter(){
     let productsListLength = cartList.children.length;
     cartCounter.textContent = productsListLength;
@@ -171,9 +121,61 @@ function printCounter(){
 
 //удаление
 cartList.addEventListener('click', (e) => {
-    console.log(e.target.parentNode)
-    let deleteBtn = e.target.parentNode
+    let deleteBtn = e.target.parentNode;
     if(deleteBtn.classList.contains('cart-btn-delete')){
         deleteProduct(deleteBtn.closest('.cart-modal__item'));
     }
-})
+});
+
+function deleteProduct(productParent) {
+    let id = productParent.dataset.id;
+    document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-btn').disabled = false;
+
+    let currentPrice = +priceWithoutSpaces(productParent.querySelector('.cart-modal__item-price').textContent);
+	minusFullPrice(currentPrice);
+    printFullPrice();
+	productParent.remove();
+
+	printCounter();
+}
+
+
+cart.addEventListener('click', (e) => {
+    let deleteBtn = e.target;
+    if(deleteBtn.classList.contains('cart-clear-all')){
+        deleteAll();
+    }
+});
+
+//удаляем весь список
+function deleteAll(){
+    cart.querySelectorAll('.cart-modal__item').forEach(elem => elem.remove());
+}
+
+// document.addEventListener('click', (event) => {
+//     console.log(event.target);
+//     if(event.target.classList.contains('cart-btn-plus')){
+//         console.log(event.target.dataset.id);
+//         plusFunction(event.target.dataset.id);
+//     }else if(event.target.classList.contains('cart-btn-minus')){
+//         console.log(event.target.dataset.id);
+//         minusFunction(event.target.dataset.id);
+//     }
+// })
+
+// //увеличение количества товара
+// const plusFunction = (id) =>{
+//     cart[id]++;
+//     renderCart();
+// }
+
+// //уменьшение количества товара
+// const minusFunction = (id) =>{
+//     if(cart[id] - 1 === 0){
+//         deleteFunction(id);
+//         return true;
+//     }
+//     cart[id]--;
+//     renderCart();
+// }
+
