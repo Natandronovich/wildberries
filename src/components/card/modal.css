@@ -1,0 +1,47 @@
+/* .modals{
+    display:none;
+}  */
+.modal-overlay{
+    position: fixed;
+    left:0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.modal-card{
+    background-color: #FFFFFF;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+/* .modals--visible{
+    display:block;
+}  */
+.modal-overlay--hidden{    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.modal-overlay--visible{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
+.modal-card--hidden{    
+    display: none;
+}
+.modal-card--visible{
+    display: block;
+}

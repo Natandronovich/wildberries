@@ -1,3 +1,5 @@
+@import url("./modal.css");
+
 .products{
     display: flex;
     flex-wrap: wrap;    
@@ -9,8 +11,32 @@
     margin: 1rem;
     border-radius: 25px;
 }
-.product img{
+.card-view{
+    position: relative;
+}
+.card-view img{
     width: 100%;
+}
+.card-view button{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+.btnshow{
+    background-color: #8570bdc0;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+.btnshow:hover{
+    scale: 1.2;
+    transition: 0.5s;
+}
+.btnhide{
+    display: none;
 }
 .card-info{
     display: flex;
