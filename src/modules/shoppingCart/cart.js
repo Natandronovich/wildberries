@@ -40,11 +40,12 @@ const cartCounter = document.querySelector('.cart__counter');
 const deleteAllBtn = document.querySelector('.cart-modal__top-button');
 const fullPrice = document.querySelector('.cart-modal__full-price');
 let price = 0;
+let randomId = 0;
 
 //для связи кнопки удалить и карточки
-const randomId = () => {
-	return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-};
+// const randomId = () => {
+// 	return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+// };
 
 // //переводить число в строку удаляя пробелы и знаки валюты
 const priceWithoutSpaces = (str) => {
@@ -77,7 +78,7 @@ const renderCart = (img, title, price, id) =>{
 
 //нажимая на card кнопку передаем нужные данные с карточки в корзину для отрисовки
 productsBtn.forEach(el => {
-	el.closest('.product').setAttribute('data-id', randomId());
+	el.closest('.product').setAttribute('data-id', randomId++);
 
 	el.addEventListener('click', (e) => {
 		let self = e.currentTarget;
@@ -93,6 +94,9 @@ productsBtn.forEach(el => {
         //копипуем данные с card в cart
         cartList.insertAdjacentHTML('afterbegin', renderCart(img, title, priceNumber, id));
 		printCounter();
+
+        // addStoreElement(id)
+        updateStorage();
 
         self.disabled = true;
 	});
@@ -137,6 +141,8 @@ function deleteProduct(productParent) {
 	productParent.remove();
 
 	printCounter();
+
+    removeStoreElement(id)
 }
 
 
@@ -149,11 +155,16 @@ function deleteProduct(productParent) {
 
 // //удаляем весь список
 // function deleteAll(){
-//     cart.querySelectorAll('.cart-modal__item').forEach(elem => elem.remove());
+//     cartList.forEach(elem => elem.remove());
 // }
 
 deleteAllBtn.addEventListener('click', ()=> {
+    // cartList.forEach(elem => elem.remove());
     cartList.remove();
+    // printCounter();
+    // countSumm();
+    // printFullPrice();
+    // updateStorage();
 });
 
 // document.addEventListener('click', (event) => {
@@ -181,5 +192,80 @@ deleteAllBtn.addEventListener('click', ()=> {
 //     }
 //     cart[id]--;
 //     renderCart();
+// }
+
+//localStorage
+function initState(){
+    if(localStorage.getItem('product') !== null){
+        console.log(localStorage.getItem('products'));
+        cartList.innerHTML = localStorage.getItem('product');
+        printCounter();
+        countSumm();
+        printFullPrice();
+
+        document.querySelectorAll('.cart-modal__item').forEach(el => {
+            let id = el.dataset.id;
+            document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-btn').disabled = true;
+        });
+    }
+}
+
+initState()
+
+function updateStorage(){
+    let parent = cartList;
+    let html = parent.innerHTML;
+    html = html.trim()
+    console.log(html);
+    console.log(html.length);
+    if(html.length){
+        localStorage.setItem('products', html);
+    }else{
+        localStorage.removeItem('products');
+    }
+}
+
+function countSumm() {
+    document.querySelectorAll('.cart-modal__item').forEach(el => {
+        price += +priceWithoutSpaces(parent.querySelector('.product-price').textContent);
+    });
+};
+
+// function setStore(value) {
+//     // ["", ""]
+//     localStorage.setItem('product', JSON.stringify(value));
+// }
+
+// function getStore() {
+//     let store = JSON.parse(localStorage.getItem('product'));
+
+//     if (store) {
+//         return store;
+//     } else {
+//         return null;
+//     }
+// }
+
+// function removeStoreElement(id) {
+//     const store = getStore('product');
+
+//     if (!store) return;
+
+//     const newStore = store.filter((item) => item !== id);
+
+//     if (newStore.length === 0) {
+//         return localStorage.removeItem('product');
+//     }
+
+//     setStore(newStore);
+// }
+
+// function addStoreElement(id) {
+//     const store = getStore('product');
+
+//     if (!store) {
+//         return setStore([id]);
+//     }
+//     if (store.indexOf(id) === -1) setStore([...store, id]);
 // }
 
