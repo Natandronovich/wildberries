@@ -40,7 +40,7 @@ const cartCounter = document.querySelector('.cart__counter');
 const deleteAllBtn = document.querySelector('.cart-modal__top-button');
 const fullPrice = document.querySelector('.cart-modal__full-price');
 let price = 0;
-let randomId = 1;
+let randomId = 0;
 
 //для связи кнопки удалить и карточки
 // const randomId = () => {
@@ -76,7 +76,7 @@ const renderCart = (img, title, price, id) =>{
 }
 
 
-//нажимая на card-кнопку передаем нужные для добавления в корзину и ее отрисовки
+//нажимая на card кнопку передаем нужные данные с карточки в корзину для отрисовки
 productsBtn.forEach(el => {
 	el.closest('.product').setAttribute('data-id', randomId++);
 
@@ -142,48 +142,8 @@ function deleteProduct(productParent) {
 
 	printCounter();
 
-    updateStorage();
+    // removeStoreElement(id)
 }
-
-
-//localStorage
-function initState(){
-    if(localStorage.getItem('products') !== null){
-        console.log(localStorage.getItem('products'));
-        cartList.innerHTML = localStorage.getItem('products');
-        printCounter();
-        countSum();
-        printFullPrice();
-
-        // оставляем кнопки товаров из корзины неактивными после обновления
-        document.querySelectorAll('.cart-modal__item').forEach(el => {
-            let id = el.dataset.id;
-            document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-btn').disabled = true;
-        });
-    }
-}
-initState()
-
-//добавить или удалить из localStorage
-function updateStorage(){
-    let parent = cartList;
-    let html = parent.innerHTML;
-    html = html.trim();  // чтобы удалить пробелы
-    // console.log(html);
-    console.log(html.length);
-    if(html.length){
-        localStorage.setItem('products', html);
-    }else{
-        localStorage.removeItem('products');
-    }
-}
-
-//считает сумму после localStorage
-function countSum() {
-    document.querySelectorAll('.cart-modal__item-price').forEach(el => {
-        price += +priceWithoutSpaces(el.textContent);
-    });
-};
 
 
 // cart.addEventListener('click', (e) => {
@@ -198,19 +158,53 @@ function countSum() {
 //     cartList.forEach(elem => elem.remove());
 // }
 
-// удалить всё, доработать
 deleteAllBtn.addEventListener('click', ()=> {
     // cartList.forEach(elem => elem.remove());
     cartList.remove();
-    // localStorage.clear();
     // printCounter();
-    countSum();
-    printFullPrice();
-    updateStorage();
+    // countSumm();
+    // printFullPrice();
+    // updateStorage();
 });
 
 
 
+//localStorage
+function initState(){
+    if(localStorage.getItem('product') !== null){
+        console.log(localStorage.getItem('product'));
+        cartList.innerHTML = localStorage.getItem('product');
+        printCounter();
+        countSumm();
+        printFullPrice();
+
+        document.querySelectorAll('.cart-modal__item').forEach(el => {
+            let id = el.dataset.id;
+            document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-btn').disabled = true;
+        });
+    }
+}
+
+initState()
+
+function updateStorage(){
+    let parent = cartList;
+    let html = parent.innerHTML;
+    html = html.trim()
+    console.log(html);
+    console.log(html.length);
+    if(html.length){
+        localStorage.setItem('product', html);
+    }else{
+        localStorage.removeItem('product');
+    }
+}
+
+function countSumm() {
+    document.querySelectorAll('.cart-modal__item').forEach(el => {
+        price += +priceWithoutSpaces(parent.querySelector('.product-price').textContent);
+    });
+};
 
 // function setStore(value) {
 //     // ["", ""]
