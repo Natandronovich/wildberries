@@ -2,12 +2,32 @@ import data from './data.js';
 
 const cardRoot = document.getElementById("card-root")
 
-function createCards(){
+var cardsStore = []
+
+fetch("https://64675bd9ba7110b663b6500e.mockapi.io/products")
+    .then((response) => {
+        if(response.status === 200) {
+            return response.json();
+        }else{
+            throw Error(response);
+        }
+    })
+    .then((json) =>{  
+        cardsStore = json
+        createCards(cardsStore)
+    })
+    .catch((error) => {
+        alert(error)
+    })
+
+
+function createCards(elements){
     const list = document.createElement("div");
     list.classList.add("products");
-    data.products.map((product)=> (
-        createCard(product,list)
-    ))
+    for(let product of Object.entries(elements)){
+        var element = product[1]
+        createCard(element,list)
+    }
     cardRoot.appendChild(list)
 }
 
@@ -15,7 +35,7 @@ function createCard(product,list){
     const item = document.createElement("div");
     item.classList.add("product");
     item.innerHTML = `
-    <div class="test" key=${product.slug}>
+    <div class="cards-wrapper" key=${product.id}>
         <p class="card-name">${product.name}</p>
         <div class="card-view">
             <img src=${product.images} alt=${product.name} />
@@ -30,10 +50,11 @@ function createCard(product,list){
 
     
    list.append(item)
+   
 }
 
 function fastView(){ 
-    let btnViewFast = document.querySelectorAll('div.test')
+    let btnViewFast = document.querySelectorAll('div.cards-wrapper')
     for(var i = 0; i < btnViewFast.length; i++) {
         btnViewFast[i].addEventListener("mouseenter",showinfo)
         btnViewFast[i].addEventListener("mouseleave",hideinfo)
@@ -47,6 +68,7 @@ function showinfo(event){
     btnView.classList.remove("btnhide")
     btnView.classList.add("btnshow")
     btnView.addEventListener("click",modalView)
+    console.log("hi")
     
 }
 function hideinfo(event){
@@ -55,6 +77,7 @@ function hideinfo(event){
     btnView.classList.remove("btnshow")
     btnView.classList.add("btnhide")
 }
+
 function modalView(event){
     const value = event.target
     const product =  value.parentNode.parentNode.parentNode.parentNode;
@@ -66,6 +89,12 @@ function modalView(event){
     <div class="modals">
         <div class="modal-overlay">
             <div class="modal-card">
+            <div class="modal-close">
+                <div class="modal-close-wrapper">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <p class="card-name">${data.products.map((product)=> ( sortObj(product,key) ))}</p>
             </div>
         </div>
@@ -81,8 +110,6 @@ function modalView(event){
     // modalOverlay.classList.add('.modal-overlay--hidden');
     // modalCard.classList.add('.modal-card--hidden')
 
-
-
     modalVisible(modalOverlay,modalCard,modals)
     
 }
@@ -95,26 +122,31 @@ function modalVisible(value1,value2,value3){
     // value1.classList.add('modal-overlay--visible')
     // value2.classList.remove('modal-card--hidden')
     // value2.classList.add('modal-card--visible')
-    const value4 = value3.parentNode
+    const modalWindowClose = value3.parentNode
+
+    const btnClose = document.querySelector('.modal-close-wrapper')
+    btnClose.addEventListener('click',(event)=> {
+        modalWindowClose.removeChild(value3)
+    })
 
     value1.addEventListener('click',(event)=> {
         if(event.target == value1){
-            value4.removeChild(value3)
+            modalWindowClose.removeChild(value3)
         }
     })
-
 }
 
 function sortObj(product,key){
-    if(key === product.slug){
+    if(key === product.id){
         return product.name
     }else{
         return console.log("Не та карточка")
     }
 }
 
-document.addEventListener("DOMContentLoaded", createCards);
-document.addEventListener("DOMContentLoaded", fastView);
+//document.addEventListener("DOMContentLoaded", getCards);
+//document.addEventListener("DOMContentLoaded", fastView);
+setTimeout(fastView, 1000);
 
 
 

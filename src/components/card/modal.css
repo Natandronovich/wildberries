@@ -2,7 +2,7 @@
     display:none;
 }  */
 .modal-overlay{
-    position: fixed;
+    position: fixed;    
     left:0;
     top: 0;
     right: 0;
@@ -25,6 +25,7 @@
     align-items: center;
     justify-content: center;
     display: none;
+    border-radius: 25px;
 }
 /* .modals--visible{
     display:block;
@@ -44,4 +45,49 @@
 }
 .modal-card--visible{
     display: block;
+}
+.modal-close{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 25px;
+}
+.modal-close-wrapper{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.modal-close span:nth-child(1){
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: rgb(77, 75, 75);
+    transform: rotate(45deg);    
+    transition: all 0.3s ease-in-out;
+}
+.modal-close span:nth-child(2){
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: rgb(77, 75, 75);
+    transform: rotate(-45deg);    
+    transition: all 0.3s ease-in-out;
+}
+.modal-close:hover{
+    background-color: rgba(255, 255, 255, 0.466);
+}
+.modal-close:hover span:nth-child(1){
+    background-color: rgba(255, 255, 255, 0.87);
+    transition: all 0.3s ease-in-out;
+}
+.modal-close:hover span:nth-child(2){
+    background-color: rgba(255, 255, 255, 0.87);
+    transition: all 0.3s ease-in-out;
 }
