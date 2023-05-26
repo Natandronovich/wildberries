@@ -42,8 +42,8 @@ function createCard(product,list){
             <button id="btn-view-card" class="btnhide">Быстрый просмотр</button>
         </div>
         <div class="card-info">            
-            <p>$${product.price}</p>
-            <button>Buy</button>
+            <p class="product-price">$${product.price}</p>
+            <button class="product-btn">Buy</button>
         </div>
     </div>
     `;
