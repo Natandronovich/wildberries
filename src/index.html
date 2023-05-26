@@ -5,14 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./core/styles/style.less">
-    <link rel="icon" href="./core/assets/icons/android-icon-36x36.png" type="image/x-icon">
+    <link rel="icon" href="./core/assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./components/card/card.css">
     <title>Wildberries</title>
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <!-- <div class="header__burger">
+                    <button type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div> -->
+                <div class="header__logo">
+                    <h1>
+                        <a class="header__logo-title" href="#">Wildberries</a>
+                    </h1>
+                </div>
+                <form class="header__search">
+                    <input class="search" name="search" placeholder="" type="search">
+                </form>
+                <div class="header__actions">
+                    <ul class="header__list">
+                        <li><a class="sing-in" href="#"></a></li>
+                        <li><button class="cart-button" id="open-modal-btn"></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <aside class="sidebar">
+            <nav class="sidebar__menu">
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link"></a></li>
+                    <li><a href="#" class="sidebar__link"></a></li>
+                    <li><a href="#" class="sidebar__link"></a></li>
+                </ul>
+            </nav>
+        </aside> -->
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <section class="slider-body" id="slider">
+                <div class="slider-body__wrapper">
+                    <div class="slider">
+                        <div class="slider__item">
+                            <img src="./core/assets/images/img_3.1.png" alt="watch">
+                        </div>
+                        <div class="slider__item">
+                            <img src="./core/assets/images/img_2.1.png" alt="iphone">
+                        </div>
+                        <div class="slider__item">
+                            <img src="./core/assets/images/img-4.png" alt="mac">
+                        </div>
+                        <div class="slider__item">
+                            <img src="./core/assets/images/img_5.1.png" alt="air-pods">
+                        </div>
+                        <div class="slider__item">
+                            <img src="./core/assets/images/img_6.1.png" alt="ipad">
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <div id="card-root"></div>
+    <footer class="footer">
+        <div class="footer__text">
+            <p>Made by The Best Code Providers</p>
+        </div>
+        <div class="footer__social-icons">
+            <ul class="footer__social-list">
+                <li><a class="footer-icon-viber" href="https://www.viber.com/ru" target="_blank"><img src="/src/core/assets/icons/viber.svg" alt="viber"></a></li>
+                <li><a class="footer-icon-facebook" href="https://www.facebook.com" target="_blank"><img src="/src/core/assets/icons/facebook-square.svg" alt="facebook"></a></li>
+                <li><a class="footer-icon-instagram" href="https://www.instagram.com" target="_blank"><img src="/src/core/assets/icons/instagram.svg" alt="instagram"></a></li>
+                <li><a class="footer-icon-vk" href="https://vk.com" target="_blank"><img src="/src/core/assets/icons/vk2.svg" alt="vk"></a></li>
+            </ul>
+        </div>
+    </footer>
     <script type="module" src="./index.js"></script>
 </body>
 </html>

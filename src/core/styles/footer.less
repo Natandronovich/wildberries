@@ -1,0 +1,44 @@
+.footer{
+    background: linear-gradient(89.5deg, rgba(211, 200, 240, 0.54) 5.04%, rgba(247, 222, 226, 0.54) 50.79%, rgba(237, 216, 230, 0.54) 96.53%);
+    max-height: 100px;
+    padding: 20px;
+
+    &__text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+
+    &__social-icons{
+        // position: absolute;
+        display: flex;
+        // top: 1px;
+        // right: 1px;
+        // z-index: 100;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__social-list{
+        display: flex;
+        align-items: center;
+        // max-width: 135px;
+    
+        li{
+            margin-right: 20px;
+            
+            img{
+                width: 100%;
+            }
+    
+            &:hover{
+                transform: scale(1.3);
+                transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+
+}
+
