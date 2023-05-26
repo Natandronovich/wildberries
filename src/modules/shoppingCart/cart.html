@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" type="text/css" href="./core/styles/style.less"> -->
+    <link rel="stylesheet" type="text/css" href="./cart.css">
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+    <link rel="stylesheet" type="text/css" href="./card.css">
+    <link rel="icon" href="./core/assets/icons/favicon.png" type="image/x-icon">
+    <title>Wildberries</title>
+</head>
+<body>
+    <header>
+        <button class="open-modal-btn" id="open-modal-btn"></button>
+        <span class="cart__counter">0</span>
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-modal__box">
+                <div class="cart-modal__top">
+                    <div class="cart-modal__top-text">
+                        <h2>Корзина</h2>
+                    </div>
+                    <div class="cart-modal__top-button">
+                        <button class="btn-clear-all">Очистить корзину</button>
+                    </div>
+                    <button class="cart-modal__close-btn" id="close-modal-btn">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>clear</title> <path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="cart-modal__content">
+                    <ul class="cart-modal__list">
+                    </ul>
+                    <div class="cart-modal__full-price">
+                        <h2>Итого:</h2>
+                        <p class="full-price"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="product">
+            <div key="iphone-12">
+                <p class="card-name">Iphone 12</p>
+                <img src="/src/core/assets/icons/watch1.png" alt="Iphone" 12="">
+                <div class="card-info">            
+                    <p class="product-price">$500</p>
+                    <button class="product-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div key="iphone-12">
+                <p class="card-name">Iphone 12</p>
+                <img src="/src/core/assets/icons/watch1.png" alt="Iphone" 12="">
+                <div class="card-info">            
+                    <p class="product-price">$500</p>
+                    <button class="product-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div key="iphone-12">
+                <p class="card-name">Iphone 12</p>
+                <img src="/src/core/assets/icons/watch1.png" alt="Iphone" 12="">
+                <div class="card-info">            
+                    <p class="product-price">$500</p>
+                    <button class="product-btn">Buy</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <!-- <script type="module" src="./index.js"></script> -->
+    <script src="./cart.js"></script>
+</body>
+</html>

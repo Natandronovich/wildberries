@@ -1,3 +1,4 @@
+import shoppingCart from "./modules/shoppingCart/export-shoppingCart.js";
 import $ from 'jquery';
 import 'slick-carousel';
 import card from './components/card/exportCards.js'
