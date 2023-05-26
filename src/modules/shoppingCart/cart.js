@@ -37,7 +37,7 @@ const productsBtn = document.querySelectorAll('.product-btn');
 const cartList = document.querySelector('.cart-modal__list');
 const cart = document.querySelector('.cart-modal');
 const cartCounter = document.querySelector('.cart__counter');
-const deleteAllBtn = document.querySelector('.cart-modal__top-button');
+const deleteAllBtn = document.querySelector('.btn-clear-all');
 const fullPrice = document.querySelector('.cart-modal__full-price');
 let price = 0;
 let randomId = 1;
@@ -186,69 +186,19 @@ function countSum() {
 };
 
 
-// cart.addEventListener('click', (e) => {
-//     let deleteBtn = e.target;
-//     if(deleteBtn.classList.contains('cart-clear-all')){
-//         deleteAll();
-//     }
-// });
-
-// //удаляем весь список
-// function deleteAll(){
-//     cartList.forEach(elem => elem.remove());
-// }
-
 // удалить всё, доработать
 deleteAllBtn.addEventListener('click', ()=> {
     // cartList.forEach(elem => elem.remove());
     cartList.remove();
-    // localStorage.clear();
+    // localStorage.setItem("products", []);
+    localStorage.removeItem("products");
+    fullPrice.textContent = `Итого: 0 $`
     // printCounter();
-    countSum();
-    printFullPrice();
+    // countSum();
+    // printFullPrice();
     updateStorage();
 });
 
-
-
-
-// function setStore(value) {
-//     // ["", ""]
-//     localStorage.setItem('product', JSON.stringify(value));
-// }
-
-// function getStore() {
-//     let store = JSON.parse(localStorage.getItem('product'));
-
-//     if (store) {
-//         return store;
-//     } else {
-//         return null;
-//     }
-// }
-
-// function removeStoreElement(id) {
-//     const store = getStore('product');
-
-//     if (!store) return;
-
-//     const newStore = store.filter((item) => item !== id);
-
-//     if (newStore.length === 0) {
-//         return localStorage.removeItem('product');
-//     }
-
-//     setStore(newStore);
-// }
-
-// function addStoreElement(id) {
-//     const store = getStore('product');
-
-//     if (!store) {
-//         return setStore([id]);
-//     }
-//     if (store.indexOf(id) === -1) setStore([...store, id]);
-// }
 
 
 

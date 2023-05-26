@@ -1,0 +1,1 @@
+import shoppingCart from "./modules/shoppingCart/export-shoppingCart.js";
