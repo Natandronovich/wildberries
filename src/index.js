@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import card from './components/card/exportCards.js'
 
 $('.slider').slick({
     arrows:true,
