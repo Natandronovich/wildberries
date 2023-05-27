@@ -74,13 +74,13 @@ const renderCart = (img, title, price, id) =>{
 function init(){
     const productsBtn = document.querySelectorAll('.btnBuy');
     // const productsBtn = document.querySelectorAll('.product-btn');
-    // console.log(productsBtn)
+    console.log(productsBtn)
     productsBtn.forEach(el => {
         el.addEventListener('click', (e) => {
             let self = e.currentTarget;
             let parent = self.closest('.product');
             let id = parent.dataset.id;
-            // console.log(id)
+            console.log(id)
             let img = parent.querySelector('img').getAttribute('src');
             let title = parent.querySelector('.card-name').textContent;
             // let priceString = parent.querySelector('.product-price').textContent;
