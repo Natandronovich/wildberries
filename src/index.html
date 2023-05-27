@@ -12,22 +12,14 @@
 <body>
     <header class="header">
         <div class="container">
-            <!-- <div class="header__social-icons">
-                <ul class="header__social-list">
-                    <li><a class="header-icon-viber" href="https://www.viber.com/ru" target="_blank"><img src="/src/core/assets/icons/viber.svg" alt="viber"></a></li>
-                    <li><a class="header-icon-facebook" href="https://www.facebook.com" target="_blank"><img src="/src/core/assets/icons/facebook.svg" alt="facebook"></a></li>
-                    <li><a class="header-icon-instagram" href="https://www.instagram.com" target="_blank"><img src="/src/core/assets/icons/instagram.svg" alt="instagram"></a></li>
-                    <li><a class="header-icon-vk" href="https://vk.com" target="_blank"><img src="/src/core/assets/icons/VK.svg" alt="vk"></a></li>
-                </ul>
-            </div> -->
             <div class="header__wrapper">
-                <div class="header__burger">
+                <!-- <div class="header__burger">
                     <button type="button">
                         <span></span>
                         <span></span>
                         <span></span>
                     </button>
-                </div>
+                </div> -->
                 <div class="header__logo">
                     <h1>
                         <a class="header__logo-title" href="#">Wildberries</a>
@@ -40,26 +32,42 @@
                     <ul class="header__list">
                         <li><a class="sing-in" href="#"></a></li>
                         <li><button class="cart-button" id="open-modal-btn"></button></li>
+                        <span class="cart__counter">0</span>
                     </ul>
                 </div>
-                <div class="header__social-icons">
-                    <ul class="header__social-list">
-                        <li><a class="header-icon-viber" href="https://www.viber.com/ru" target="_blank"><img src="/src/core/assets/icons/viber.svg" alt="viber"></a></li>
-                        <li><a class="header-icon-facebook" href="https://www.facebook.com" target="_blank"><img src="/src/core/assets/icons/facebook.svg" alt="facebook"></a></li>
-                        <li><a class="header-icon-instagram" href="https://www.instagram.com" target="_blank"><img src="/src/core/assets/icons/instagram.svg" alt="instagram"></a></li>
-                        <li><a class="header-icon-vk" href="https://vk.com" target="_blank"><img src="/src/core/assets/icons/VK.svg" alt="vk"></a></li>
-                    </ul>
+                <div class="cart-modal" id="cart-modal">
+                    <div class="cart-modal__box">
+                        <div class="cart-modal__top">
+                            <div class="cart-modal__top-text">
+                                <h2>Корзина</h2>
+                            </div>
+                            <div class="cart-modal__top-button">
+                                <button class="btn-clear-all">Очистить корзину</button>
+                            </div>
+                            <button class="cart-modal__close-btn" id="close-modal-btn">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <title>clear</title> <path d="M18.984 6.422l-5.578 5.578 5.578 5.578-1.406 1.406-5.578-5.578-5.578 5.578-1.406-1.406 5.578-5.578-5.578-5.578 1.406-1.406 5.578 5.578 5.578-5.578z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="cart-modal__content">
+                            <ul class="cart-modal__list">
+                            </ul>
+                            <div class="cart-modal__full-price">
+                                <h2>Итого:</h2>
+                                <p class="full-price"></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- <aside class="sidebar">
             <nav class="sidebar__menu">
                 <ul class="sidebar__list">
-                    <li><a href="#features" class="sidebar__link">features</a></li>
-                    <li><a href="#works" class="sidebar__link">works</a></li>
-                    <li><a href="#our-team" class="sidebar__link">our team</a></li>
-                    <li><a href="#reviews" class="sidebar__link">testimonials</a></li>
-                    <li><a href="#download" class="sidebar__link">download</a></li>
+                    <li><a href="#" class="sidebar__link"></a></li>
+                    <li><a href="#" class="sidebar__link"></a></li>
+                    <li><a href="#" class="sidebar__link"></a></li>
                 </ul>
             </nav>
         </aside> -->
@@ -88,7 +96,19 @@
         </section>
     </main>
     <div id="card-root"></div>
-    <footer></footer>
+    <footer class="footer">
+        <div class="footer__text">
+            <p>Made by The Best Code Providers</p>
+        </div>
+        <div class="footer__social-icons">
+            <ul class="footer__social-list">
+                <li><a class="footer-icon-viber" href="https://www.viber.com/ru" target="_blank"><img src="/src/core/assets/icons/viber.svg" alt="viber"></a></li>
+                <li><a class="footer-icon-facebook" href="https://www.facebook.com" target="_blank"><img src="/src/core/assets/icons/facebook-square.svg" alt="facebook"></a></li>
+                <li><a class="footer-icon-instagram" href="https://www.instagram.com" target="_blank"><img src="/src/core/assets/icons/instagram.svg" alt="instagram"></a></li>
+                <li><a class="footer-icon-vk" href="https://vk.com" target="_blank"><img src="/src/core/assets/icons/vk2.svg" alt="vk"></a></li>
+            </ul>
+        </div>
+    </footer>
     <script type="module" src="./index.js"></script>
 </body>
 </html>

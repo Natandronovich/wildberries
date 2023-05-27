@@ -45,7 +45,7 @@ function createCard(product,list){
             <img src=${product.images} alt=${product.name} />
         </div>
         <div class="card-info">            
-            <p>$${product.price}</p>
+            <p class="product-price">$${product.price}</p>
         </div>
     </div>
     `;
