@@ -14,7 +14,6 @@ function getCards(){
     })
     .then((json) =>{  
         createCards(json)
-        console.log(json)
     })
     .catch((error) => {
         alert(error)
@@ -55,6 +54,7 @@ function createCard(product,list){
     buyDivBTN.appendChild(buyButton)
     const viewDivBTN = item.querySelector(".card-view")
     viewDivBTN.appendChild(viewButton)
+    item.setAttribute("name",product.name)
 
     item.addEventListener("mouseenter", () => showinfo(viewButton));
     item.addEventListener("mouseleave", () => hideinfo(viewButton));
