@@ -81,7 +81,9 @@ function init(){
     
         el.addEventListener('click', (e) => {
             let self = e.currentTarget;
-            let parent = self.closest('.product');
+            console.log(self)
+            let parent = self.closest('.cards-wrapper');
+            // let parent = self.closest('.product');
             let id = parent.getAttribute('key')
             console.log(id)
             // let id = parent.dataset.id;
@@ -162,9 +164,10 @@ cartList.addEventListener('click', (e) => {
 
 function deleteProduct(productParent) {
 
-    let id = parent.getAttribute('key')
-    console.log(parent.getAttribute('key'))
-    // document.querySelector(`.product[key="${id}"]`).querySelector('.product-btn').disabled = false;
+    // let parent = document.querySelectorAll('.cards-wrapper')
+    // let id = parent.getAttribute('key')
+    // console.log(parent.getAttribute('key'))
+    // document.querySelector(`.cards-wrapper[key=${id}]`).querySelector('.product-btn').disabled = false;
         // let id = productParent.dataset.id;
     // document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-btn').disabled = false;
 

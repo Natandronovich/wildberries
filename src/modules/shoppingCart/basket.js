@@ -57,7 +57,7 @@ function createCard(product,list){
     const productsBtn = document.createElement("button");
     productsBtn.classList.add("product-btn");
 
-    productsBtn.addEventListener("click", () => console.log(product.id));
+    productsBtn.addEventListener("click", () => init());
 
     item.querySelector(".card-info").append(productsBtn);
 
