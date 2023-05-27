@@ -72,7 +72,7 @@
     text-align: center;
 }
 
-.product-btn:disabled {
+.btnBuy:disabled {
 	opacity: 0.4;
 	pointer-events: none;
 }

@@ -33,15 +33,12 @@ popUp.addEventListener('click', event => {
 
 
 //функции корзины
-// const productsBtn = document.querySelectorAll('.product-btn')
-// console.log(productsBtn)
 const cartList = document.querySelector('.cart-modal__list');
 const cart = document.querySelector('.cart-modal');
 const cartCounter = document.querySelector('.cart__counter');
 const deleteAllBtn = document.querySelector('.btn-clear-all');
 const fullPrice = document.querySelector('.cart-modal__full-price');
 let price = 0;
-let randomId = 1;
 
 
 // //переводить число в строку удаляя пробелы и знаки валюты
@@ -52,7 +49,7 @@ const priceWithoutSpaces = (str) => {
 //отрисовка корзины
 const renderCart = (img, title, price, id) =>{
     return `
-    <li class="cart-modal__item" key="${id}">
+    <li class="cart-modal__item" data-id="${id}">
         <div class="cart-modal__item-img">
             <img src="${img}" alt=""></div>
         <div class="cart-modal__item-descr">
@@ -75,21 +72,18 @@ const renderCart = (img, title, price, id) =>{
 
 //нажимая на card-кнопку передаем нужные для добавления в корзину и ее отрисовки
 function init(){
-    const productsBtn = document.querySelectorAll('.product-btn');
+    const productsBtn = document.querySelectorAll('.btnBuy');
+    // const productsBtn = document.querySelectorAll('.product-btn');
+    // console.log(productsBtn)
     productsBtn.forEach(el => {
-        // el.closest('.product').setAttribute('data-id', randomId++);
-    
         el.addEventListener('click', (e) => {
             let self = e.currentTarget;
-            console.log(self)
-            let parent = self.closest('.cards-wrapper');
-            // let parent = self.closest('.product');
-            let id = parent.getAttribute('key')
-            console.log(id)
-            // let id = parent.dataset.id;
+            let parent = self.closest('.product');
+            let id = parent.dataset.id;
+            // console.log(id)
             let img = parent.querySelector('img').getAttribute('src');
             let title = parent.querySelector('.card-name').textContent;
-            let priceString = parent.querySelector('.product-price').textContent;
+            // let priceString = parent.querySelector('.product-price').textContent;
             let priceNumber = +priceWithoutSpaces(parent.querySelector('.product-price').textContent);
     
             plusFullPrice(priceNumber);
@@ -164,12 +158,9 @@ cartList.addEventListener('click', (e) => {
 
 function deleteProduct(productParent) {
 
-    // let parent = document.querySelectorAll('.cards-wrapper')
-    // let id = parent.getAttribute('key')
-    // console.log(parent.getAttribute('key'))
-    // document.querySelector(`.cards-wrapper[key=${id}]`).querySelector('.product-btn').disabled = false;
-        // let id = productParent.dataset.id;
-    // document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-btn').disabled = false;
+    let id = productParent.dataset.id;
+    // console.log(id)
+    document.querySelector(`.product[data-id="${id}"]`).querySelector('.btnBuy').disabled = false;
 
     let currentPrice = +priceWithoutSpaces(productParent.querySelector('.cart-modal__item-price').textContent);
 	minusFullPrice(currentPrice);
@@ -192,10 +183,11 @@ function initState(){
         printFullPrice();
 
         // оставляем кнопки товаров из корзины неактивными после обновления
-        // document.querySelectorAll('.cart-modal__item').forEach(el => {
-        //     let id = el.dataset.id;
-        //     document.querySelector(`.product[data-id="${id}"]`).querySelector('.product-btn').disabled = true;
-        // });
+        document.querySelectorAll('.cart-modal__item').forEach(el => {
+            let id = el.dataset.id;
+            console.log(id);
+            // document.querySelector(`.product[data-id="${id}"]`).querySelector('.btnBuy').disabled = true;
+        });
     }
 }
 initState()
@@ -206,7 +198,7 @@ function updateStorage(){
     let html = parent.innerHTML;
     html = html.trim();  // чтобы удалить пробелы
     // console.log(html);
-    console.log(html.length);
+    // console.log(html.length);
     if(html.length){
         localStorage.setItem('products', html);
     }else{
