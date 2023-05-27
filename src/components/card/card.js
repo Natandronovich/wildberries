@@ -2,9 +2,9 @@ import data from './data.js';
 
 const cardRoot = document.getElementById("card-root")
 
-var cardsStore = []
+function getCards(){
 
-fetch("https://64675bd9ba7110b663b6500e.mockapi.io/products")
+    fetch("https://64675bd9ba7110b663b6500e.mockapi.io/products")
     .then((response) => {
         if(response.status === 200) {
             return response.json();
@@ -13,12 +13,14 @@ fetch("https://64675bd9ba7110b663b6500e.mockapi.io/products")
         }
     })
     .then((json) =>{  
-        cardsStore = json
-        createCards(cardsStore)
+        createCards(json)
+        console.log(json)
     })
     .catch((error) => {
         alert(error)
     })
+
+}
 
 
 function createCards(elements){
@@ -34,81 +36,109 @@ function createCards(elements){
 function createCard(product,list){
     const item = document.createElement("div");
     item.classList.add("product");
+    const viewButton = createButtonElement("btnhide", "Быстрый просмотр");
+    const buyButton = createButtonElement("btnBuy", "Buy");
     item.innerHTML = `
-    <div class="cards-wrapper" key=${product.id}>
+    <div class="card-wrapper">
         <p class="card-name">${product.name}</p>
         <div class="card-view">
             <img src=${product.images} alt=${product.name} />
-            <button id="btn-view-card" class="btnhide">Быстрый просмотр</button>
         </div>
         <div class="card-info">            
             <p class="product-price">$${product.price}</p>
-            <button class="product-btn">Buy</button>
         </div>
     </div>
     `;
+    item.setAttribute('data-id',`${product.id}`)
+    list.append(item)
+    const buyDivBTN = item.querySelector(".card-info")
+    buyDivBTN.appendChild(buyButton)
+    const viewDivBTN = item.querySelector(".card-view")
+    viewDivBTN.appendChild(viewButton)
 
-    
-   list.append(item)
+    item.addEventListener("mouseenter", () => showinfo(viewButton));
+    item.addEventListener("mouseleave", () => hideinfo(viewButton));
+    viewButton.addEventListener("click",() => modalView(product,list))
+
+
    
 }
-
-function fastView(){ 
-    let btnViewFast = document.querySelectorAll('div.cards-wrapper')
-    for(var i = 0; i < btnViewFast.length; i++) {
-        btnViewFast[i].addEventListener("mouseenter",showinfo)
-        btnViewFast[i].addEventListener("mouseleave",hideinfo)
-      }
-
+function createButtonElement (className, children) {
+    const button = document.createElement("button")
+    className && button.classList.add(className)
+    button.setAttribute("type","button")
+    button.setAttribute("id","btn-view-card")
+    button.innerHTML = children
+    return button
 }
 
 function showinfo(event){
-    const value = event.target
-    const btnView = value.querySelector('#btn-view-card')
-    btnView.classList.remove("btnhide")
-    btnView.classList.add("btnshow")
-    btnView.addEventListener("click",modalView)
-    console.log("hi")
+    event.classList.remove("btnhide")
+    event.classList.add("btnshow")
     
 }
 function hideinfo(event){
-    const value = event.target
-    const btnView = value.querySelector('#btn-view-card')
-    btnView.classList.remove("btnshow")
-    btnView.classList.add("btnhide")
+    event.classList.remove("btnshow")
+    event.classList.add("btnhide")
 }
 
-function modalView(event){
-    const value = event.target
-    const product =  value.parentNode.parentNode.parentNode.parentNode;
-    const productId = value.parentNode.parentNode;
+function modalView(product,list){
     const item = document.createElement("div");
     item.classList.add("chil");
-    const key = productId.getAttribute('key')
+    const buyButton = createButtonElement("btnBuy", "Buy");
     item.innerHTML = `
-    <div class="modals">
-        <div class="modal-overlay">
-            <div class="modal-card">
-            <div class="modal-close">
-                <div class="modal-close-wrapper">
-                    <span></span>
-                    <span></span>
+    <div class="modal">
+        <div class="modal_overlay">
+            <div class="modal_card">
+                <div class="modal_close">
+                    <div class="modal_close-wrapper">
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
-            </div>
-            <p class="card-name">${data.products.map((product)=> ( sortObj(product,key) ))}</p>
+                <h2 class="modal_card-name">${product.name}</h2>
+                <div class="modal_info">
+                    <div class="modal_img">
+                        <img src="${product.images}">
+                    </div>                    
+                    <div class="modal_main-info">
+                        <div class="modal_description">
+                            <h5>Описание: </h5>
+                            <p>${product.description}</p>
+                        </div>
+                        <div class="modal_addinfo">
+                            <div class="modal_price">
+                                <h5>Цена: </h5>
+                            <p>${product.price} $</p>
+                            </div>
+                            <div class="modal_price"> 
+                                <h5>В наличии:</h5> 
+                                <p>${product.countInStock} штук</p>
+                            </div>        
+                            <div class="modal_brand"> 
+                                <h5>Брэнд: </h5>
+                                <p>${product.brand}</p> 
+                            </div>
+                            <div class="modal_brand">
+                                <h5>Рейтинг:</h5> 
+                                <p>${product.rating} баллов</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     `;
-    
-    console.log(key)
-    product.lastChild.className != "chil" ? product.append(item) : console.log("Элемент уже создан") 
 
+
+    list.lastChild.className != "chil" ? list.append(item) : console.log("Элемент уже создан") 
     const modals = document.querySelector('.chil');
-    const modalOverlay = document.querySelector('.modal-overlay');
-    const modalCard = document.querySelector('.modal-card');
-    // modalOverlay.classList.add('.modal-overlay--hidden');
-    // modalCard.classList.add('.modal-card--hidden')
+    const modalOverlay = document.querySelector('.modal_overlay');
+    const modalCard = document.querySelector('.modal_card');
+
+    const buyDivBTN = item.querySelector(".modal_card")
+    buyDivBTN.appendChild(buyButton)
 
     modalVisible(modalOverlay,modalCard,modals)
     
@@ -124,7 +154,7 @@ function modalVisible(value1,value2,value3){
     // value2.classList.add('modal-card--visible')
     const modalWindowClose = value3.parentNode
 
-    const btnClose = document.querySelector('.modal-close-wrapper')
+    const btnClose = document.querySelector('.modal_close-wrapper')
     btnClose.addEventListener('click',(event)=> {
         modalWindowClose.removeChild(value3)
     })
@@ -144,9 +174,7 @@ function sortObj(product,key){
     }
 }
 
-//document.addEventListener("DOMContentLoaded", getCards);
-//document.addEventListener("DOMContentLoaded", fastView);
-setTimeout(fastView, 1000);
+document.addEventListener("DOMContentLoaded", getCards);
 
 
 
