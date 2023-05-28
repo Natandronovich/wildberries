@@ -1,4 +1,5 @@
 import data from './data.js';
+import { init } from '../../modules/shoppingCart/cart.js';
 
 const cardRoot = document.getElementById("card-root")
 

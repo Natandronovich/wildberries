@@ -71,7 +71,7 @@ const renderCart = (img, title, price, id) =>{
 
 
 //нажимая на card-кнопку передаем нужные для добавления в корзину и ее отрисовки
-function init(){
+export function init(){
     const productsBtn = document.querySelectorAll('.btnBuy');
     // const productsBtn = document.querySelectorAll('.product-btn');
     // console.log(productsBtn)
@@ -102,30 +102,6 @@ function init(){
 }
 
 setTimeout(init, 2000);
-// productsBtn.forEach(el => {
-// 	el.closest('.product').setAttribute('data-id', randomId++);
-
-// 	el.addEventListener('click', (e) => {
-// 		let self = e.currentTarget;
-// 		let parent = self.closest('.product');
-// 		let id = parent.dataset.id;
-// 		let img = parent.querySelector('img').getAttribute('src');
-// 		let title = parent.querySelector('.card-name').textContent;
-// 		let priceString = parent.querySelector('.product-price').textContent;
-// 		let priceNumber = +priceWithoutSpaces(parent.querySelector('.product-price').textContent);
-
-// 		plusFullPrice(priceNumber);
-// 		printFullPrice();
-//         //копипуем данные с card в cart
-//         cartList.insertAdjacentHTML('afterbegin', renderCart(img, title, priceNumber, id));
-// 		printCounter();
-
-//         // addStoreElement(id)
-//         updateStorage();
-
-//         self.disabled = true;
-// 	});
-// });
 
 //суммировать общую цену
 function plusFullPrice(currentPrice){
