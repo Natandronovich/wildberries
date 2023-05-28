@@ -9,6 +9,10 @@
         justify-content: space-between;
         position: relative;
         padding: 20px;
+
+        @media screen and (max-width: 840px) {
+            padding: 20px 0 20px 0;
+        }
     }
 
     // &__burger{
@@ -44,6 +48,10 @@
             color: @dark-text-color;
             display: flex;
             align-items: center;
+
+            @media screen and (max-width: 840px) {
+                font-size: 40px;
+            }
 
             &:hover{
                 // color: rgb(190, 114, 205);
@@ -118,15 +126,28 @@
             align-items: center;
             justify-content: center;
             display: block;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            background-image: url(/src/core/assets/icons/Sing_in.svg);
+            // background-repeat: no-repeat;
+            // background-position: center;
+            // background-size: contain;
+            // background-image: url(/src/core/assets/icons/Sing_in.svg);
 
-            &:hover{
-                transform: scale(1.1);
-                transition: all 0.5s ease-in-out;
+            svg{
+                width: 53px;
+                height: 53px;
             }
+    
+            svg path{
+                transition: fill 0.4s;
+            }
+    
+            &:hover svg path{
+                fill: @violet-background-color;
+            }
+
+            // &:hover{
+            //     transform: scale(1.1);
+            //     transition: all 0.5s ease-in-out;
+            // }
         }
 
         .cart-button{
@@ -143,6 +164,10 @@
             background-image: url(/src/core/assets/icons/basket.png);
             margin-right: 20px;
             cursor: pointer;
+
+            @media screen and (max-width: 700px) {
+                margin-right: 0px;
+            }
 
             &:hover{
                 transform: scale(1.1);
