@@ -53,6 +53,7 @@
     justify-content: space-between;
     font-size: 24px;
     align-items: center;
+    cursor: pointer;
 }
 .card-info button{
     background-color: #8570BD;
@@ -62,6 +63,7 @@
     height: 30px;
     color: #FFFFFF;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 .card-info button:hover{
     scale: 1.2;
@@ -73,4 +75,9 @@
 }
 .hideCard{
     display: none;
+
+}
+.btnBuy:disabled{
+	opacity: 0.4;
+	pointer-events: none;
 }
