@@ -74,7 +74,7 @@ const renderCart = (img, title, price, id) =>{
 function init(){
     const productsBtn = document.querySelectorAll('.btnBuy');
     // const productsBtn = document.querySelectorAll('.product-btn');
-    console.log(productsBtn)
+    // console.log(productsBtn)
     productsBtn.forEach(el => {
         el.addEventListener('click', (e) => {
             let self = e.currentTarget;
