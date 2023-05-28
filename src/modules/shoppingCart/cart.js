@@ -216,19 +216,13 @@ function countSum() {
 
 // удалить всё, доработать
 deleteAllBtn.addEventListener('click', ()=> {
-    // cartList.forEach(elem => elem.remove());
     while (cartList.firstChild) {
         cartList.removeChild(cartList.firstChild);
       }
-    // localStorage.setItem("products", []);
-    //localStorage.removeItem("products");
     localStorage.clear()
     console.log('hi');
     fullPrice.textContent = `Итого: 0 $`
     printCounter();
-    // countSum();
-    // printFullPrice();
-    //updateStorage();
 });
 
 
