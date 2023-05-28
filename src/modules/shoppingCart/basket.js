@@ -38,3 +38,31 @@
 // }
 
 
+function createCard(product,list){
+    const item = document.createElement("div");
+    item.classList.add("product");
+    item.innerHTML = `
+    <div class="cards-wrapper" key=${product.id}>
+        <p class="card-name">${product.name}</p>
+        <div class="card-view">
+            <img src=${product.images} alt=${product.name} />
+            <button id="btn-view-card" class="btnhide">Быстрый просмотр</button>
+        </div>
+        <div class="card-info">
+        <p class="product-price">$${product.price}</p>
+        </div>
+    </div>
+    `;
+
+    const productsBtn = document.createElement("button");
+    productsBtn.classList.add("product-btn");
+
+    productsBtn.addEventListener("click", () => init());
+
+    item.querySelector(".card-info").append(productsBtn);
+
+
+    
+   list.append(item)
+   
+}

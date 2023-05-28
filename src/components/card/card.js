@@ -39,7 +39,7 @@ function createCards(elements){
         var element = product[1]
         createCard(element,list)
     }
-    cardRoot.insertBefore(list,cardRoot.children[1])
+    cardRoot.prepend(list)
 }
 
 function createCard(product,list){

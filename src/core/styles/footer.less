@@ -1,5 +1,5 @@
 .footer{
-    background: linear-gradient(89.5deg, rgba(211, 200, 240, 0.54) 5.04%, rgba(247, 222, 226, 0.54) 50.79%, rgba(237, 216, 230, 0.54) 96.53%);
+    background: @main-background-color;
     max-height: 100px;
     padding: 20px;
 
@@ -9,14 +9,14 @@
         justify-content: center;
         padding-bottom: 10px;
         font-size: 20px;
+
+        @media screen and (max-width: 400px) {
+            font-size: 16px;
+        }
     }
 
     &__social-icons{
-        // position: absolute;
         display: flex;
-        // top: 1px;
-        // right: 1px;
-        // z-index: 100;
         align-items: center;
         justify-content: center;
     }
@@ -24,10 +24,17 @@
     &__social-list{
         display: flex;
         align-items: center;
-        // max-width: 135px;
     
         li{
             margin-right: 20px;
+
+            svg path{
+                transition: fill 0.4s;
+            }
+    
+            &:hover svg path{
+                fill: @violet-background-color;
+            }
             
             img{
                 width: 100%;

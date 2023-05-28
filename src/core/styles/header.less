@@ -3,12 +3,20 @@
     min-height: 100px;
     width: 100%;
 
-    &__wrapper{
+    &__top{
         display: flex;
         align-items: center;
         justify-content: space-between;
         position: relative;
         padding: 20px;
+
+        @media screen and (max-width: 840px) {
+            padding: 20px 0 20px 0;
+        }
+        
+        @media screen and (max-width: 700px) {
+            padding: 0px;
+        }
     }
 
     // &__burger{
@@ -45,10 +53,22 @@
             display: flex;
             align-items: center;
 
+            @media screen and (max-width: 840px) {
+                font-size: 40px;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 38px;
+            }
+
+            @media screen and (max-width: 340px) {
+                font-size: 35px;
+            }
+
             &:hover{
-                // color: rgb(190, 114, 205);
+                color: @violet-background-color;
                 transition: all 0.3s ease-in-out;
-                opacity: 0.7;
+                // opacity: 0.7;
             }
         }
     }
@@ -59,6 +79,10 @@
         margin: 0 19px;
         flex-grow: 1;
 
+        @media screen and (max-width: 700px) {
+            display: none;
+        }
+
         input {
             position: relative;
             padding: 17px 50px;
@@ -66,6 +90,10 @@
             height: 55px;
             border: none;
             border-radius: 35px;
+
+            @media screen and (max-width: 700px) {
+                height: 40px;
+            }
 
             &:hover {
                 outline: none;
@@ -82,11 +110,15 @@
         }
 
         &::before {
-            content: url('/src/core/assets/icons/Search.svg');
+            content: url('/src/core/assets/icons/search_1.svg');
             position: absolute;
-            top: 5px;
-            right: 27px;
+            top: 12px;
+            right: 20px;
             z-index: 10;
+            
+            @media screen and (max-width: 700px) {
+                top: 4px;
+            }
         }
     }
 
@@ -102,6 +134,10 @@
 
             li{
                 margin: 0 10px;
+
+                @media screen and (max-width: 470px) {
+                    margin: 0 3px;
+                }
             }
 
         button{
@@ -118,11 +154,27 @@
             align-items: center;
             justify-content: center;
             display: block;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            background-image: url(/src/core/assets/icons/Sing_in.svg);
 
+            @media screen and (max-width: 470px) {
+                width: 46px;
+                height: 46px;
+            }
+
+            svg{
+                width: 53px;
+                height: 53px;
+
+                @media screen and (max-width: 470px) {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                @media screen and (max-width: 360px) {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+    
             &:hover{
                 transform: scale(1.1);
                 transition: all 0.5s ease-in-out;
@@ -131,22 +183,42 @@
 
         .cart-button{
             position: relative;
-            width: 50px;
-            height: 50px;
+            width: 66px;
+            height: 66px;
             align-items: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            background-image: url(/src/core/assets/icons/basket.png);
-            margin-right: 20px;
             cursor: pointer;
+
+            @media screen and (max-width: 470px) {
+                width: 59px;
+                height: 59px;
+            }
+
+            @media screen and (max-width: 360px) {
+                padding: 1px;
+                width: 45px;
+                height: 45px;
+            }
 
             &:hover{
                 transform: scale(1.1);
                 transition: all 0.5s ease-in-out;
+            }
+        }
+    }
+
+    &__bottom {
+        display: none;
+
+        @media screen and (max-width: 700px) {
+            display: flex;
+            margin-top: -10px;
+
+            .header__search {
+                display: block;
+                margin: 10px 0;
             }
         }
     }

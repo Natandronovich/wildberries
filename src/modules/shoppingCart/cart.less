@@ -1,20 +1,7 @@
-.open-modal-btn{
-    background-color: #8570BD;
-    border: none;
-    border-radius: 10px;
-    width: 100px;
-    height: 45px;
-    color: #FFFFFF;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin: 20px;
-    position: relative;
-}
-
 .cart__counter {
 	position: absolute;
     top: 35px;
-    right: 50px;
+    right: 43px;
 	background-color: #de707b;
 	border-radius: 100%;
 	padding: 2px;
@@ -25,6 +12,22 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+
+    @media screen and (max-width: 840px) {
+        right: 19px;
+    }
+
+    @media screen and (max-width: 700px) {
+        top: 17px;
+    }
+
+    @media screen and (max-width: 470px) {
+        right: 13px;
+    }
+
+    @media screen and (max-width: 360px) {
+        right: 7px;
+    }
 }
 
 .cart-modal{
@@ -52,11 +55,12 @@
     
     &__box{
         position: relative;
-        max-width: 500px;
+        max-width: 800px;
+        min-width: 400px;
         padding: 45px;
         z-index: 1;
         background-color: #fff;
-        margin: 30px 15px;
+        border-radius: 25px;
     }
 
     &__close-btn{
@@ -113,4 +117,75 @@
     &__item-img{
         max-width: 100px;
     }
+
+    &__item-descr,
+    &__item-price{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 0 15px;
+    padding: 0 30px;
+    }
+
+    &__item-price{
+        button.cart-btn-delete{
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            margin-top: 1px;
+    
+            svg path{
+                transition: fill 0.4s;
+            }
+    
+            &:hover svg path{
+                fill: @pink-background-color;
+            }
+        }
+    }
+
+
+
+    &__item-counters{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+        button{
+            border: 1px solid #808080;
+            background-color: #ffffff;
+            border-radius: 50%;
+            width: 24px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cart-counter-input{
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            border: none;
+            color: #1a1a1a;
+            background: transparent;
+        }
+    }
+
+    &__full-price{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 50px;
+        font-size: 23px;
+        line-height: 24px;
+        margin: 10px 0;
+
+
+
+        .full-price{
+            margin-right: 70px;
+        }
+    }
+
+
 }
