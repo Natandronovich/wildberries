@@ -1,10 +1,13 @@
 import data from './data.js';
 
 const cardRoot = document.getElementById("card-root")
-
-function getCards(){
-
-    fetch("https://64675bd9ba7110b663b6500e.mockapi.io/products")
+function getCards(pagesCards){
+    const url = new URL(`https://64675bd9ba7110b663b6500e.mockapi.io/products?page=${pagesCards}&limit=10`);
+    console.log(pagesCards)
+    // url.searchParams.append('completed', false);
+    // url.searchParams.append('page', 1);
+    // url.searchParams.append('limit', 10);
+    fetch(url) 
     .then((response) => {
         if(response.status === 200) {
             return response.json();
@@ -20,7 +23,6 @@ function getCards(){
     })
 
 }
-
 
 function createCards(elements){
     const list = document.createElement("div");
@@ -49,7 +51,7 @@ function createCard(product,list){
     </div>
     `;
     item.setAttribute('data-id',`${product.id}`)
-    list.append(item)
+    list.insertBefore(item,list.children[1])
     const buyDivBTN = item.querySelector(".card-info")
     buyDivBTN.appendChild(buyButton)
     const viewDivBTN = item.querySelector(".card-view")
@@ -166,15 +168,28 @@ function modalVisible(value1,value2,value3){
     })
 }
 
-function sortObj(product,key){
-    if(key === product.id){
-        return product.name
-    }else{
-        return console.log("Не та карточка")
-    }
+function nextPage(){
+    let pagesCards = 1
+    const pageCard = createButtonElement("nextPage", "Следующая страница");
+    cardRoot.append(pageCard)
+    pageCard.addEventListener("click", function(){
+        pagesCards = pagesCards + 1;
+        const deletePages = document.querySelector('.products');
+        deletePages.remove()
+        getCards(pagesCards)
+    })
+    const nextPageCard = createButtonElement("previousPage", "Предыдущая страница");
+    cardRoot.append(nextPageCard)
+    nextPageCard.addEventListener("click", function(){
+        pagesCards > 1 ? pagesCards = pagesCards - 1 : alert("Вы на первой странице")
+        console.log(pagesCards)
+        const deletePages = document.querySelector('.products');
+        deletePages.remove()
+        getCards(pagesCards) 
+    })        
 }
 
-document.addEventListener("DOMContentLoaded", getCards);
-
+document.addEventListener("DOMContentLoaded", getCards(1));
+nextPage()
 
 
