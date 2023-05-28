@@ -1,0 +1,167 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    .product{
+        width: 280px;
+        box-shadow: 0px 0px 3px 3px rgba(141, 133, 133, 0.2);
+        margin: 1rem;
+        border-radius: 25px;
+        &--active{
+            box-shadow: 0px 0px 6px 6px rgba(141, 133, 133, 0.2);
+        }
+    }
+    .card-wrapper{ 
+        .card-name{
+            font-size: 24px;
+            text-align: center;
+        } 
+        .card-view{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            max-width: 320px;
+            height: 350px;
+            img{
+                width: 100%;
+                max-height: 250px;
+                max-width: 200px;
+            }
+            button{
+                position: absolute;
+                top: 50%;
+                left: 25%;
+            }
+        }
+        .card-info{
+            display: flex;
+            padding: 1rem;
+            justify-content: space-between;
+            font-size: 24px;
+            align-items: center;
+            button{
+                background-color: #8570BD;
+                border: none;
+                border-radius: 10px;
+                width: 60px;
+                height: 30px;
+                color: #FFFFFF;
+                transition: 0.3s ease;
+                &:hover{
+                    scale: 1.2;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+    .btnshow{
+        background-color: #8570bdc0;
+        border: none;
+        border-radius: 10px;
+        width: 100px;
+        height: 40px;
+        color: #FFFFFF;
+        transition: 0.3s ease;
+        &:hover{
+            scale: 1.2;
+            transition: 0.5s;
+        }
+    }
+    .btnhide{
+        display: none;
+    }
+    .hideCard{
+        display: none;
+    }
+    .btnBuy{
+        &:disabled{
+            opacity: 0.4;
+            pointer-events: none;
+        }
+    }
+}
+.pageSwap{
+    display: flex;
+    justify-content: center;
+    margin: 20px 15px;
+    &previous{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: #8570BD;
+        border: none;
+        padding: 5px;
+        margin-right: 5px;
+        transition: 0.2s ease;
+        &:hover{
+            background-color: #f7f7f7d8;
+            transition: 0.5s ease;
+            span{
+                border: 5px solid #8570BD;
+                border-width: 0 5px 5px 0;
+                transition: 0.5s ease;
+            }
+        }
+        span{
+            margin-left: 8px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 5px solid white;
+            border-width: 0 5px 5px 0;
+            border-radius: 3px;
+            transform: rotate(135deg);
+            transition: 0.2s ease;
+        }
+    }
+    &next{
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: #8570BD;
+        border: none;
+        margin-left: 5px;
+        transition: 0.2s ease;
+        &:hover{
+            background-color: #f7f7f7d8;
+            transition: 0.5s ease;
+            span{
+                border: 5px solid #8570BD;
+                border-width: 0 5px 5px 0;
+                transition: 0.5s ease;
+            }
+        }
+        span{
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 5px solid white;
+            border-width: 0 5px 5px 0;
+            border-radius: 3px;
+            transform: rotate(-45deg);
+            transition: 0.2s ease;
+        }
+        &--hide{
+            background-color: #8570bd5d;
+        }
+    }
+}
+.pageNumber{
+    display: flex;
+    justify-content: center;
+    margin: 15px 15px;
+    cursor:default;
+    p{
+        background-color:   #8570BD;
+        width: 200px;
+        text-align: center;
+        border-radius: 20px;
+        font-size: 20px;
+        color: #FFFFFF;
+        box-shadow: 0px 2px 15px 3px #8570BD;
+    }
+}
+
