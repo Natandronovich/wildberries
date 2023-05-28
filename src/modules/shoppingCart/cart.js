@@ -219,15 +219,15 @@ deleteAllBtn.addEventListener('click', ()=> {
     // cartList.forEach(elem => elem.remove());
     cartList.remove();
     // localStorage.setItem("products", []);
-    localStorage.removeItem("products");
+    //localStorage.removeItem("products");
+    localStorage.clear()
+    console.log('hi');
     fullPrice.textContent = `Итого: 0 $`
     // printCounter();
     // countSum();
     // printFullPrice();
-    updateStorage();
+    //updateStorage();
 });
-
-
 
 
 // document.addEventListener('click', (event) => {
