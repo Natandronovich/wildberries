@@ -73,8 +73,11 @@
     font-size: 24px;
     text-align: center;
 }
+.hideCard{
+    display: none;
 
-.btnBuy:disabled {
+}
+.btnBuy:disabled{
 	opacity: 0.4;
 	pointer-events: none;
 }
