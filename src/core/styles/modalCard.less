@@ -5,7 +5,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: @dark-background-color;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -17,7 +17,7 @@
         z-index: 1000;
     }
     &_card{
-        background-color: #FFFFFF;
+        background-color: @white-background-color;
         width: 80%;
         height: 80vh;
         display: flex;
@@ -27,12 +27,12 @@
         border-radius: 25px;
         padding: 10px;
         button{
-            background-color: #8570BD;
+            background-color: @violet-background-color;
             border: none;
             border-radius: 10px;
             width: 60%;
             height: 50px;
-            color: #FFFFFF;
+            color: @white-background-color;
             transition: 0.3s ease;
             margin: 0 auto;
             display: block;
@@ -64,20 +64,20 @@
             &:hover{
                 scale: 1.04;
                 transition: 0.5s;
-                background-color: #7260a5ad;
+                background-color: @violet-hover-background-color;
             }
         }
     }
     &_close{
         width: 50px;
         height: 50px;
-        background-color: rgb(255, 255, 255);
+        background-color: @white-background-color;
         position: absolute;
         top: 0;
         right: 0;
         border-radius: 25px;
         &:hover{
-            background-color: rgba(255, 255, 255, 0.466);
+            background-color: @grey-hover-background-color;
         }
     }
     &_close-wrapper{
@@ -92,7 +92,7 @@
             width: 35px;
             height: 3px;
             border-radius: 10px;
-            background-color: rgb(77, 75, 75);
+            background-color: @grey-background-color;
             transform: rotate(45deg);    
             transition: all 0.3s ease-in-out;
         }
@@ -101,16 +101,16 @@
             width: 35px;
             height: 3px;
             border-radius: 10px;
-            background-color: rgb(77, 75, 75);
+            background-color: @grey-background-color;
             transform: rotate(-45deg);    
             transition: all 0.3s ease-in-out;
         }
         &:hover span:nth-child(1){
-            background-color: rgba(255, 255, 255, 0.87);
+            background-color: @white-hover-background-color;
             transition: all 0.3s ease-in-out;
         }
         &:hover span:nth-child(2){
-            background-color: rgba(255, 255, 255, 0.87);
+            background-color: @white-hover-background-color;
             transition: all 0.3s ease-in-out;
         }
     }
