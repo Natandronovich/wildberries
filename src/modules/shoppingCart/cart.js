@@ -192,12 +192,11 @@ function countSum() {
 deleteAllBtn.addEventListener('click', ()=> {
     while (cartList.firstChild) {
         cartList.removeChild(cartList.firstChild);
-      }
+    }
     localStorage.clear()
     console.log('hi');
     fullPrice.textContent = `Итого: 0 $`
     printCounter();
-
 
     document.querySelector('.btnBuy').disabled = false;
 });
