@@ -1,4 +1,5 @@
-6643
+6658
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_6.1.2da596cf.png133299312455334287 0
 108C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\core\src\Validation.js133286293132659037 0
 77C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\package.json133299208525024655 0
 107C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\svgo\plugins\removeDoctype.js133286293106915263 0
@@ -37,7 +38,7 @@
 128C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\dom-serializer\node_modules\entities\lib\decode.js133286293052730122 0
 83C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\src\modules\slider133296938471991005 1
 115C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@swc\helpers\src\_new_arrow_check.mjs133286293131994673 0
-75C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\.gitignore133299304364791157 0
+75C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\.gitignore133299308805948345 0
 111C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\features\let.js133286293150207271 0
 109C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\workers\src\cpuCount.js133286293080062370 0
 100C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\mdn-data\l10n\css.json133286293078157383 0
@@ -46,7 +47,7 @@
 87C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\is-number133286293053128522 1
 104C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\nth-check\lib\compile.d.ts133286293092326144 0
 86C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-tree133286293137132347 1
-69C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist133299306507835215 1
+69C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist133299312954082633 1
 102C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\abortcontroller-polyfill133286293082353309 1
 102C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\htmlparser2\lib\index.js133286293052026024 0
 81C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\sax133286299661442175 1
@@ -518,7 +519,7 @@
 113C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\needle\examples\download-to-file.js133286299662587445 0
 82C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\pify133286299661476152 1
 134C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts.map133286293080941961 0
-90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\favicon.b600cb2a.png133299306505680519 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\favicon.b600cb2a.png133299312949787355 0
 85C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel133287051700406913 1
 101C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\source-map\CHANGELOG.md133286293083873790 0
 158C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\msgpackr-extract\node_modules\.bin\node-gyp-build-optional-packages-optional.cmd133286293164061757 0
@@ -559,6 +560,7 @@
 92C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\semver\LICENSE133286293048550164 0
 89C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\mime\cli.js133286299661808489 0
 108C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\mdn-data\css\units.schema.json133286293097756085 0
+88C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img-4.ea36c163.png133299312455513808 0
 115C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\type-fest\source\set-return-type.d.ts133286293101847237 0
 132C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\dom-serializer\node_modules\entities\lib\maps\xml.json133286293077608018 0
 123C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@swc\helpers\lib\_class_private_field_init.js133286293093325127 0
@@ -607,7 +609,7 @@
 92C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\dom-serializer133286293079489242 1
 86C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\mdn-data133286293099225453 1
 114C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\features\mathml.js133286293150992389 0
-100C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\arrow-arrow-right.e1223203.svg133299306506807374 0
+100C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\arrow-arrow-right.e1223203.svg133299312951841860 0
 111C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\less\test\browser\css\global-vars133286299662309390 1
 116C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\packager-js\lib\dev-prelude.js133286293057295460 0
 92C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\domelementtype133286293070907892 1
@@ -1222,6 +1224,7 @@
 121C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\source-map-support\register-hook-require.js133286293051260392 0
 112C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\type-fest\source\set-optional.d.ts133286293099560622 0
 117C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\features\autofocus.js133286293109293255 0
+100C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\arrow-arrow-right.679e3fd1.svg133299312454825658 0
 112C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\type-fest\source\set-required.d.ts133286293100679223 0
 108C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\mdn-data\css\types.schema.json133286293096566375 0
 120C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\features\css-autofill.js133286293130566959 0
@@ -2468,6 +2471,7 @@
 116C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\cosmiconfig\dist\ExplorerSync.d.ts.map133286293087516955 0
 109C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\lmdb\dependencies\lz4\lib\lz4.h133286293128726255 0
 114C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\lmdb\dependencies\lz4\lib\lz4frame.c133286293101285740 0
+89C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\basket.bdfb39cb.png133299312454835627 0
 114C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\lmdb\dependencies\lz4\lib\lz4frame.h133286293128897047 0
 111C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\lmdb\dependencies\lz4\lib\lz4hc.c133286293104363688 0
 103C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@lezer\lr\dist\stack.d.ts133286293078620921 0
@@ -3544,6 +3548,7 @@
 96C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\domhandler\LICENSE133286293048136246 0
 92C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\.bin\acorn.cmd133286293163883289 0
 135C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\features\css-font-rendering-controls.js133286293132880949 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_2.1.4119dadb.png133299312455254495 0
 143C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\property133286293099461018 1
 101C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\domhandler\package.json133286293056986214 0
 109C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\regions\CD.js133286293127179186 0
@@ -4085,6 +4090,7 @@
 100C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-tree\lib\generator133286293136428948 1
 110C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-tree\cjs\tokenizer\utils.cjs133286293130538969 0
 114C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-select\node_modules\entities\lib133286293121499861 1
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\Sing_in.be58dca7.svg133299312454825658 0
 129C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@babel\highlight\node_modules\color-name\.npmignore133286293050649820 0
 97C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-tree\lib\syntax133286293134534913 1
 125C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-select\node_modules\domhandler\package.json133286293070693451 0
@@ -4456,6 +4462,7 @@
 123C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\features\media-fragments.js133286293151246252 0
 112C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\features\heif.js133286293141496296 0
 96C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-select\lib\esm133286293126618453 1
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_5.1.a3ecf8de.png133299312455144791 0
 109C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-select\lib\general.d.ts.map133286293108966469 0
 109C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\regions\VU.js133286293162023427 0
 103C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\css-select\lib\general.js133286293080637685 0
@@ -4559,7 +4566,7 @@
 93C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\clone\README.md133286293051828230 0
 108C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\chrome-trace-event\LICENSE.txt133286293066642345 0
 109C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\caniuse-lite\data\regions\MC.js133286293151032875 0
-90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_3.1.05ac6410.png133299306505680519 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_3.1.05ac6410.png133299312949787355 0
 109C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\chrome-trace-event\package.json133286293050825071 0
 106C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\chrome-trace-event\README.md133286293058558765 0
 118C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\chrome-trace-event\dist\trace-event.d.ts133286293064962133 0
@@ -5581,7 +5588,7 @@
 132C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\transformer-js\parcel-swc.linux-arm64-gnu.node133286293150765257 0
 104C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\transformer-js\src133286293070229990 1
 124C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\transformer-js\src\esmodule-helpers.js133286293053126346 0
-90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_6.1.19f048ec.png133299306505680519 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_6.1.19f048ec.png133299312949807272 0
 124C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\transformer-js\lib\esmodule-helpers.js133286293051029165 0
 118C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\transformer-js\lib\loadNative.js133286293067186982 0
 107C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\transformer-image\lib133286293064737891 1
@@ -6070,6 +6077,7 @@
 160C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeAttributesBySelector.js133286293108116150 0
 129C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@jridgewell\trace-mapping\dist\trace-mapping.umd.js133286293051009219 0
 145C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeAttrs.js133286293108775517 0
+91C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\search_1.a8647542.svg133299312454825658 0
 144C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeDesc.js133286293109808341 0
 150C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeDimensions.js133286293110606472 0
 155C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeEmptyContainers.js133286293112999506 0
@@ -6307,7 +6315,7 @@
 148C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\foo\nested\baz.js133286293081762265 0
 156C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\aliased-file\package.json133286293127310086 0
 151C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\aliased\package.json133286293127385898 0
-88C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img-4.d4e4b7c5.png133299306505680519 0
+88C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img-4.d4e4b7c5.png133299312949787355 0
 145C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\@scope\pkg\foo133286293065763454 1
 150C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\@scope\pkg\index.js133286293099482162 0
 152C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\@scope\pkg\foo\bar.js133286293065763454 0
@@ -6488,7 +6496,7 @@
 99C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\codeframe\src133286293095081148 1
 112C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\codeframe\src\codeframe.js133286293095171267 0
 102C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\cache\index.d.ts133286293082619520 0
-90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_5.1.04032bf7.png133299306505690343 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_5.1.04032bf7.png133299312949907018 0
 95C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\cache\src133286293080072349 1
 107C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\cache\src\IDBCache.js133286293067526457 0
 108C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\@parcel\cache\src\LMDBCache.js133286293078226949 0
@@ -6631,14 +6639,21 @@
 89C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\.bin\terser133286293164005504 0
 93C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\.bin\terser.cmd133286293164015475 0
 93C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\node_modules\.bin\terser.ps1133286293164005504 0
-99C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\arrow-arrow-left.b108611a.svg133299306506807374 0
-89C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\basket.a242f672.png133299306505680519 0
-90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_2.1.8d7adb33.png133299306505680519 0
-87C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.3ea67fb6.js133299306507725516 0
-88C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.06e3e8a8.css133299306507715516 0
-91C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.3ea67fb6.js.map133299306507835215 0
-92C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.06e3e8a8.css.map133299306507825222 0
-80C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.html133299306507715516 0
-91C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\search_1.6e0fb47e.svg133299306506807374 0
-90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\Sing_in.34cba853.svg133299306506807374 0
+99C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\arrow-arrow-left.34d8bbb2.svg133299312454825658 0
+99C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\arrow-arrow-left.b108611a.svg133299312951841860 0
+89C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\basket.a242f672.png133299312949817258 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\favicon.7c8d4b96.png133299312455154779 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_2.1.8d7adb33.png133299312949777368 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\img_3.1.379db6cc.png133299312455513808 0
+87C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.3ea67fb6.js133299312953653777 0
+88C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.06e3e8a8.css133299312953653777 0
+91C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.3ea67fb6.js.map133299312953962946 0
+92C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.06e3e8a8.css.map133299312953972924 0
+87C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.975ef6c8.js133299312455174711 0
+91C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.975ef6c8.js.map133299312455663646 0
+88C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.e200358b.css133299312454835627 0
+92C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.e200358b.css.map133299312455653444 0
+80C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\index.html133299312953643804 0
+91C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\search_1.6e0fb47e.svg133299312951841860 0
+90C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\dist\Sing_in.34cba853.svg133299312951841860 0
 86C:\Users\TiMoFeI\Desktop\teachMeSkills\project-wildberries-clone\.vscode\settings.json133295845425014158 0
