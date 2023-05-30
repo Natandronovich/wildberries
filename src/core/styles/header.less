@@ -126,34 +126,38 @@
         }
 
         .sing-in{
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             text-decoration: none;
             align-items: center;
             display: flex;
             align-items: center;
             justify-content: center;
             display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url(/src/core/assets/icons/Sing_in.svg);
 
             @media screen and (max-width: 470px) {
                 width: 46px;
                 height: 46px;
             }
 
-            svg{
-                width: 53px;
-                height: 53px;
+            // svg{
+            //     width: 53px;
+            //     height: 53px;
 
-                @media screen and (max-width: 470px) {
-                    width: 48px;
-                    height: 48px;
-                }
+            //     @media screen and (max-width: 470px) {
+            //         width: 48px;
+            //         height: 48px;
+            //     }
 
-                @media screen and (max-width: 360px) {
-                    width: 45px;
-                    height: 45px;
-                }
-            }
+            //     @media screen and (max-width: 360px) {
+            //         width: 45px;
+            //         height: 45px;
+            //     }
+            // }
     
             &:hover{
                 transform: scale(1.1);
@@ -163,12 +167,16 @@
 
         .cart-button{
             position: relative;
-            width: 66px;
-            height: 66px;
+            width: 63px;
+            height: 63px;
             align-items: center;
             display: flex;
             align-items: center;
             justify-content: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url(/src/core/assets/icons/basket.png);
             cursor: pointer;
 
             @media screen and (max-width: 470px) {
