@@ -99,7 +99,7 @@ function init(){
     
 }
 
-setTimeout(init, 2000);
+//setTimeout(init, 2000);
 
 //суммировать общую цену
 function plusFullPrice(currentPrice){
@@ -134,7 +134,9 @@ function deleteProduct(productParent) {
 
     let id = productParent.dataset.id;
     // console.log(id)
-    document.querySelector(`.product[data-id="${id}"]`).querySelector('.btnBuy').disabled = false;
+    if(document.querySelector(`.product[data-id="${id}"]`)){
+        document.querySelector(`.product[data-id="${id}"]`).querySelector('.btnBuy').disabled = false;
+    }
 
     let currentPrice = +priceWithoutSpaces(productParent.querySelector('.cart-modal__item-price').textContent);
 	minusFullPrice(currentPrice);
@@ -197,8 +199,13 @@ deleteAllBtn.addEventListener('click', ()=> {
     console.log('hi');
     fullPrice.textContent = `Итого: 0 $`
     printCounter();
+    const allBtns = document.querySelectorAll('.btnBuy')
+    allBtns.forEach((productBtn) => {
+        productBtn.removeAttribute('disabled')
+    })
 
     document.querySelector('.btnBuy').disabled = false;
 });
 
 
+export {init};

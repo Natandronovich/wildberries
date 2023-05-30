@@ -1,3 +1,5 @@
+import {init} from '../../modules/shoppingCart/cart.js';
+
 const cardRoot = document.getElementById("card-root")
 function getCards(pagesCards){
     const url = new URL(`https://64675bd9ba7110b663b6500e.mockapi.io/products?page=${pagesCards}&limit=10`);
@@ -16,14 +18,12 @@ function getCards(pagesCards){
             pagesCards = pagesCards - 1
             numberOfPage(pagesCards)
             btnNext.classList.add('pageSwapnext--hide')
-            btnNext.removeEventListener("click", function(){
-                pagesCards = pagesCards + 1;
-                getCards(pagesCards)
-            });
+            btnNext.removeEventListener("click",counterNext);
         }else{
             btnNext.classList.remove('pageSwapnext--hide')
             numberOfPage(pagesCards) 
             createCards(json)
+            init()
         }
     })
     .catch((error) => {
@@ -182,7 +182,6 @@ function modalVisible(value1,value2,value3){
 }
 
 function nextPage(){
-    let pagesCards = 1
     const pageSwap = document.createElement('div')
     pageSwap.classList.add('pageSwap')
     cardRoot.append(pageSwap)
@@ -198,17 +197,23 @@ function nextPage(){
     pageSwap.append(nextCard)
    // nextCard.append(document.createElement('span'))
 
-    nextCard.addEventListener("click", function(){
-        pagesCards = pagesCards + 1;
-        getCards(pagesCards)
-    })
+    nextCard.addEventListener("click",counterNext)
 
 
-    previousPageCard.addEventListener("click", function(){
-        pagesCards > 1 ? pagesCards = pagesCards - 1 : alert("Вы на первой странице")
-        console.log(pagesCards)
-        getCards(pagesCards)
-    })
+    previousPageCard.addEventListener("click", () =>counterNext(1))
+}
+let pagesCards = 1
+function counterNext(value){   
+        if(typeof value === "object"){
+            pagesCards = pagesCards + 1;
+            getCards(pagesCards)
+        }else{
+            pagesCards > 1 ? pagesCards = pagesCards - 1 : alert("Вы на первой странице")
+            console.log(pagesCards)
+            getCards(pagesCards)
+            const nextCard = document.querySelector('.pageSwapnext')
+            nextCard.addEventListener("click",counterNext)
+        }
 }
 
 function numberOfPage(numberPage){
