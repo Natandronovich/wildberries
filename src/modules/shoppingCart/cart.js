@@ -52,19 +52,21 @@ const renderCart = (img, title, price, id) =>{
     <li class="cart-modal__item" data-id="${id}">
         <div class="cart-modal__item-img">
             <img src="${img}" alt=""></div>
-        <div class="cart-modal__item-descr">
-            <h3>${title}</h3>
-        </div>
-        <div class="cart-modal__item-counters">
-            <button class="cart-btn-plus" data-id="${id}">+</button>
-            <input class="cart-counter-input" type=""text" value="1" disabled>
-            <button class="cart-btn-minus" data-id="${id}">-</button>
-        </div>
-        <div class="cart-modal__item-price">
-            <p >${price} $</p>
-            <button class="cart-btn-delete">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M15.4624 7.625H18.5249V9.375H17.1365L16.37 17.8063C16.3085 18.4824 15.7417 19 15.0629 19H8.86193C8.1831 19 7.61628 18.4824 7.55482 17.8063L6.78834 9.375H5.3999V7.625H8.4624V6.3125C8.4624 5.58763 9.05003 5 9.7749 5H14.1499C14.8748 5 15.4624 5.58763 15.4624 6.3125V7.625ZM10.2124 6.75V7.625H13.7124V6.75H10.2124ZM8.54556 9.375L9.26147 17.25H14.6633L15.3792 9.375H8.54556Z" fill="currentColor"></path></svg>
-            </button>
+        <div class="cart-modal__text">
+            <div class="cart-modal__item-descr">
+                <h3>${title}</h3>
+            </div>
+            <div class="cart-modal__item-counters">
+                <button class="cart-btn-plus" data-id="${id}">+</button>
+                <input class="cart-counter-input" type=""text" value="1" disabled>
+                <button class="cart-btn-minus" data-id="${id}">-</button>
+            </div>
+            <div class="cart-modal__item-price">
+                <p >${price} $</p>
+                <button class="cart-btn-delete">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M15.4624 7.625H18.5249V9.375H17.1365L16.37 17.8063C16.3085 18.4824 15.7417 19 15.0629 19H8.86193C8.1831 19 7.61628 18.4824 7.55482 17.8063L6.78834 9.375H5.3999V7.625H8.4624V6.3125C8.4624 5.58763 9.05003 5 9.7749 5H14.1499C14.8748 5 15.4624 5.58763 15.4624 6.3125V7.625ZM10.2124 6.75V7.625H13.7124V6.75H10.2124ZM8.54556 9.375L9.26147 17.25H14.6633L15.3792 9.375H8.54556Z" fill="currentColor"></path></svg>
+                </button>
+            </div>
         </div>
     </li>`;
 }
@@ -204,7 +206,7 @@ deleteAllBtn.addEventListener('click', ()=> {
         productBtn.removeAttribute('disabled')
     })
 
-    document.querySelector('.btnBuy').disabled = false;
+    // document.querySelector('.btnBuy').disabled = false;
 });
 
 
