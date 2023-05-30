@@ -103,6 +103,39 @@ function init(){
 
 //setTimeout(init, 2000);
 
+function initModal(){
+    const productsBtn = document.querySelectorAll('.btnBuy');
+    console.log(productsBtn)
+    const modalcard = document.querySelectorAll('.modal_card');
+    console.log(modalcard)
+
+
+    productsBtn.forEach(el => {
+        el.addEventListener('click', (e) => {
+            let self = e.currentTarget;
+            let parent = self.closest('.modal_card');
+            let id = parent.dataset.id;
+            console.log(id)
+            let img = parent.querySelector('img').getAttribute('src');
+            let title = parent.querySelector('.card-name').textContent;
+            let priceNumber = +priceWithoutSpaces(parent.querySelector('.product-price').textContent);
+    
+            plusFullPrice(priceNumber);
+            printFullPrice();
+            //копипуем данные с card в cart
+            cartList.insertAdjacentHTML('afterbegin', renderCart(img, title, priceNumber, id));
+            printCounter();
+    
+            updateStorage();
+    
+            self.disabled = true;
+        });
+    });
+    
+}
+
+// setTimeout(initModal, 2000);
+
 //суммировать общую цену
 function plusFullPrice(currentPrice){
     return price +=currentPrice;
@@ -210,4 +243,4 @@ deleteAllBtn.addEventListener('click', ()=> {
 });
 
 
-export {init};
+export {init, initModal};
