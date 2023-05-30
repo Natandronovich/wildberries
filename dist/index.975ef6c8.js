@@ -691,8 +691,8 @@ function initModal() {
             let id = parent.dataset.id;
             console.log(id);
             let img = parent.querySelector("img").getAttribute("src");
-            let title = parent.querySelector(".card-name").textContent;
-            let priceNumber = +priceWithoutSpaces(parent.querySelector(".product-price").textContent);
+            let title = parent.querySelector(".modal_card-name").textContent;
+            let priceNumber = +priceWithoutSpaces(parent.querySelector(".modal_price").textContent);
             plusFullPrice(priceNumber);
             printFullPrice();
             //копипуем данные с card в cart
@@ -703,7 +703,7 @@ function initModal() {
         });
     });
 }
-// setTimeout(initModal, 2000);
+setTimeout(initModal, 2000);
 //суммировать общую цену
 function plusFullPrice(currentPrice) {
     return price += currentPrice;

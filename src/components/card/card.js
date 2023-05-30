@@ -1,4 +1,4 @@
-import {init} from '../../modules/shoppingCart/cart.js';
+import {init, initModal} from '../../modules/shoppingCart/cart.js';
 
 const cardRoot = document.getElementById("card-root")
 function getCards(pagesCards){
