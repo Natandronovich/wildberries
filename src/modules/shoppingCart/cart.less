@@ -2,7 +2,7 @@
 	position: absolute;
     top: 35px;
     right: 43px;
-	background-color: #de707b;
+	background-color: @pink-counter-background-color;
 	border-radius: 100%;
 	padding: 2px;
 	color: @white-text-color;
@@ -34,14 +34,6 @@
     @media screen and (max-width: 360px) {
         left: 281px;
     }
-
-    // @media screen and (max-width: 470px) {
-    //     right: 13px;
-    // }
-
-    // @media screen and (max-width: 360px) {
-    //     right: 7px;
-    // }
 }
 
 .cart-modal{
@@ -51,9 +43,8 @@
     top: 0;
     width: 100vw;
     height:100%;
-    // min-height: 100vh;
     z-index: 100000;
-    background-color: rgba(0, 0, 0, 0.216);
+    background-color: @dark-background-color;
     display: grid;
     display: flex;
     align-items: center;
@@ -107,7 +98,7 @@
         cursor: pointer;
 
         &:hover svg path{
-            fill: blueviolet;
+            fill: @violet-background-color;
         }
 
         svg path{
@@ -219,7 +210,7 @@
 
         button{
             border: 1px solid #808080;
-            background-color: #ffffff;
+            background-color: @white-background-color;
             border-radius: 50%;
             width: 24px;
             text-align: center;
@@ -231,7 +222,7 @@
             height: 32px;
             text-align: center;
             border: none;
-            color: #1a1a1a;
+            color: @dark-text-color;
             background: transparent;
         }
     }
@@ -251,6 +242,4 @@
             margin-right: 70px;
         }
     }
-
-
 }

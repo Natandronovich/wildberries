@@ -2,12 +2,11 @@
     &__wrapper{
         height: 100%;
         padding: 30px;
-        background: #ffffff;
+        background: @white-background-color;
 
             @media screen and (max-width: 685px) {
                 padding: 30px 10px 30px 10px;
             }
-
     }
 
     .slider{
@@ -43,13 +42,11 @@
     border: none;
     cursor: pointer;
         &.slick-prev{
-            // left: 0;
             left: 2%;
             z-index: 1000;
             background: url('/src/core/assets/icons/arrow-arrow-left.svg') 0 0 / 100% no-repeat;
         }
         &.slick-next{
-            // right: 0;
             right: 2%;
             z-index: 1000;
             background: url('/src/core/assets/icons/arrow-arrow-right.svg') 0 0 / 100% no-repeat;
@@ -74,8 +71,7 @@
                 }
         
             &.slick-active button{
-                background-color: #212121c2;
-                // background-color: #8570BD;
+                background-color: @dark-active-arrow-slider-background-color;
                 width: 15px;
                 height: 15px;
 
@@ -91,8 +87,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            // background-color: #C5C1F5;
-            background-color: #21212180;
+            background-color: @dark-buttton-slider-background-color;
             border: none;
 
                 @media screen and (max-width: 530px) {

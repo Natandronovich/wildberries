@@ -7,12 +7,9 @@ import search from './modules/inputSearch/exportSearch.js'
 $('.slider').slick({
     arrows:true,
     dots:true,
-    // adaptiveHeight:true,
     slidesToShow:1,
-    // infinite:false, /*чтобы слайдер не был бесконечным + класс у кнопки disabled*/
     autoplay:true,
     draggable:false,
-    // centerMode:true,
     fade:true,
     responsive: [
         {
