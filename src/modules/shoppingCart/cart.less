@@ -5,7 +5,7 @@
 	background-color: #de707b;
 	border-radius: 100%;
 	padding: 2px;
-	color: #fff;
+	color: @white-text-color;
 	font-size: 12px;
 	min-height: 16px;
 	min-width: 16px;
@@ -19,15 +19,29 @@
 
     @media screen and (max-width: 700px) {
         top: 17px;
+        right: inherit;
+        left: 328px;
     }
 
     @media screen and (max-width: 470px) {
-        right: 13px;
+        left: 298px;
+    }
+
+    @media screen and (max-width: 400px) {
+        left: 289px;
     }
 
     @media screen and (max-width: 360px) {
-        right: 7px;
+        left: 281px;
     }
+
+    // @media screen and (max-width: 470px) {
+    //     right: 13px;
+    // }
+
+    // @media screen and (max-width: 360px) {
+    //     right: 7px;
+    // }
 }
 
 .cart-modal{
@@ -62,8 +76,25 @@
         min-width: 400px;
         padding: 45px;
         z-index: 1;
-        background-color: #fff;
+        background-color: @white-background-color;
         border-radius: 25px;
+
+        @media screen and (max-width:1000px) {
+            max-width: 530px;
+        }
+        @media screen and (max-width:640px) {
+            max-width: 450px;
+        }
+
+        @media screen and (max-width:500px) {
+            max-width: 340px;
+            min-width: 300px;
+        }
+
+        @media screen and (max-width:500px) {
+            max-width: 340px;
+            min-width: 300px;
+        }
     }
 
     &__close-btn{
@@ -94,27 +125,50 @@
         h2{
             font-size: 28px;
             line-height: 33px;
+
+            @media screen and (max-width:500px) {
+                font-size: 25px;
+            }
         }
     }
     
     .btn-clear-all{
-        background-color: #8570BD;
+        background-color:@violet-background-color;
         border: none;
         border-radius: 10px;
         width: 100px;
         height: 45px;
-        color: #FFFFFF;
+        color: @white-background-color;
         cursor: pointer;
         transition: 0.3s ease;
 
         &:hover{
-            background-color: #9e87de;
+            background-color: @violet-hover-background-color;
+        }
+
+        @media screen and (max-width:500px) {
+            width: 63px;
+            height: 30px;
+            font-size: 10px;
         }
     }
 
     &__item{
         display: flex;
         padding: 12px 0;
+
+        @media screen and (max-width:500px) {
+            justify-content: space-between;
+        }
+    }
+
+    &__text{
+        display: flex;
+
+            @media screen and (max-width:500px) {
+                flex-direction: column;
+                justify-content: space-around;
+            }
     }
 
     &__item-img{
@@ -127,6 +181,15 @@
     align-items: center;
     margin: 0 15px;
     padding: 0 30px;
+
+        @media screen and (max-width:1000px) {
+            padding: 0 6px;
+        }
+        @media screen and (max-width:640px) {
+            margin: 0 5px;
+            padding: 0 0px;
+            font-size: 14px;
+        }
     }
 
     &__item-price{
